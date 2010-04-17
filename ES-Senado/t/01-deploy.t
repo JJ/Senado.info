@@ -7,7 +7,7 @@ use Test::More qw( no_plan ); #Random initial string...
 use lib qw( lib ../lib ../../lib  ); #Just in case we are testing it in-place
 
 use ES::Senado;
-use YAML  qw(LoadFile);
+use YAML  qw(Load);
 
 use DBI;
 
@@ -22,7 +22,24 @@ my $schema = ES::Senado->connect($dsn);
 $schema->deploy({ add_drop_tables => 1});
 
 
-my @hof = LoadFile( 'persona.yaml' ) || die "No puedo cargar fichero persona: $@\n";
+my @hof = Load(<<END_YAML);
+---
+nombre: Johnny
+apellidos: Be Good
+grupo: RNR
+origen: designado
+zona: Tennessee
+partido: RNB
+genero: m
+---
+nombre: Dolly
+apellidos: Parton
+grupo: CNW
+origen: electo
+zona: Kansas
+partido: Country Forever
+genero: f
+END_YAML
 
 my $rs_persona = $schema->resultset('Personas');
 
@@ -42,3 +59,6 @@ is( $#todos_y_todas, -1, "Borrados" );
 eval { $dbh->do("DROP DATABASE $dbname") };
 print "No se puede cerrar la base de datos: $@\n" if $@;
 $dbh->disconnect();
+__DATA__
+
+

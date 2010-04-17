@@ -17,7 +17,24 @@ use base qw/DBIx::Class::Schema Exporter/;
 # Module implementation here
 __PACKAGE__->load_namespaces();
 
-1; # Magic true value required at end of module
+sub extrae_nombres_listado {
+  my $string = shift || croak "Hace falta una cadena";
+
+  my @lista_con_formato = ($string =~ m{<li>(.+?)</li>}gs);
+
+  my @senadores;
+  for my $s ( @lista_con_formato ) {
+    my ( $url_ficha, $apellidos, $nombre, $nombramiento, $zona ) = ($s =~ m{'([^']+)'\)">([^,]+), ([^)]+)+ \((\w+)\)</a>\s+. (\w+) por (.+)});
+    push @senadores, { url => $url_ficha,
+		       apellidos => $apellidos,
+		       nombre => $nombre,
+		       nombramiento => $nombramiento,
+		       zona => $zona };
+  }
+  return \@senadores;
+}
+
+"La Nación española, deseando establecer la justicia, la libertad y la seguridad y promover el bien de cuantos la integran, en uso de su soberanía, proclama su voluntad de:Garantizar la convivencia democrática dentro de la Constitución y de las leyes conforme a un orden económico y social justo. Consolidar un Estado de Derecho que asegure el imperio de la ley como expresión de la voluntad popular. Proteger a todos los españoles y pueblos de España en el ejercicio de los derechos humanos, sus culturas y tradiciones, lenguas e instituciones. Promover el progreso de la cultura y de la economía para asegurar a todos una digna calidad de vida. Establecer una sociedad democrática avanzada, y Colaborar en el fortalecimiento de unas relaciones pacíficas y de eficaz cooperación entre todos los pueblos de la Tierra. "; # Magic true value required at end of module
 __END__
 
 =head1 NAME
@@ -47,12 +64,14 @@ This document describes ES::Senado version 0.0.1
 
 =head1 INTERFACE 
 
-=for author to fill in:
-    Write a separate section listing the public components of the modules
-    interface. These normally consist of either subroutines that may be
-    exported, or methods that may be called on objects belonging to the
-    classes provided by the module.
+=head2 extrae_nombres_listado( $cadena ) 
 
+Extrae los nombres del listado alfabético de senadores. Devuelve una lista de hashes con la estructura:
+  { url => $url_ficha,
+    apellidos => $apellidos,
+    nombre => $nombre,
+    nombramiento => $nombramiento,
+    zona => $zona };
 
 =head1 DIAGNOSTICS
 

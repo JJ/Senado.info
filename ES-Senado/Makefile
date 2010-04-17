@@ -16,7 +16,7 @@
 #     BUILD_REQUIRES => {  }
 #     NAME => q[ES::Senado]
 #     PL_FILES => {  }
-#     PREREQ_PM => { Test::More=>q[0], version=>q[0] }
+#     PREREQ_PM => { Test::More=>q[0], YAML=>q[0], version=>q[0], DBIx::Class=>q[0] }
 #     VERSION_FROM => q[lib/ES/Senado.pm]
 #     clean => { FILES=>q[ES-Senado-*] }
 #     dist => { COMPRESS=>q[gzip -9f], SUFFIX=>q[gz] }
@@ -185,12 +185,12 @@ PERL_ARCHIVE_AFTER =
 
 
 TO_INST_PM = lib/ES/Senado.pm \
-	lib/ES/Senado/Result/Persona.pm
+	lib/ES/Senado/Result/Personas.pm
 
-PM_TO_BLIB = lib/ES/Senado/Result/Persona.pm \
-	blib/lib/ES/Senado/Result/Persona.pm \
-	lib/ES/Senado.pm \
-	blib/lib/ES/Senado.pm
+PM_TO_BLIB = lib/ES/Senado.pm \
+	blib/lib/ES/Senado.pm \
+	lib/ES/Senado/Result/Personas.pm \
+	blib/lib/ES/Senado/Result/Personas.pm
 
 
 # --- MakeMaker platform_constants section:
@@ -491,8 +491,10 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) 'build_requires:' >> META_new.yml
 	$(NOECHO) $(ECHO) '    ExtUtils::MakeMaker:  0' >> META_new.yml
 	$(NOECHO) $(ECHO) 'requires:' >> META_new.yml
-	$(NOECHO) $(ECHO) '    Test::More:  0' >> META_new.yml
-	$(NOECHO) $(ECHO) '    version:     0' >> META_new.yml
+	$(NOECHO) $(ECHO) '    DBIx::Class:  0' >> META_new.yml
+	$(NOECHO) $(ECHO) '    Test::More:   0' >> META_new.yml
+	$(NOECHO) $(ECHO) '    version:      0' >> META_new.yml
+	$(NOECHO) $(ECHO) '    YAML:         0' >> META_new.yml
 	$(NOECHO) $(ECHO) 'no_index:' >> META_new.yml
 	$(NOECHO) $(ECHO) '    directory:' >> META_new.yml
 	$(NOECHO) $(ECHO) '        - t' >> META_new.yml
@@ -795,7 +797,9 @@ ppd :
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Clase base para representar los datos del Senado español</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>JJ Merelo &lt;jj@merelo.net&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="DBIx::Class" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Test::More" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="YAML::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="version::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="x86_64-linux-thread-multi-5.10" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
@@ -807,8 +811,8 @@ ppd :
 
 pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
-	  lib/ES/Senado/Result/Persona.pm blib/lib/ES/Senado/Result/Persona.pm \
-	  lib/ES/Senado.pm blib/lib/ES/Senado.pm 
+	  lib/ES/Senado.pm blib/lib/ES/Senado.pm \
+	  lib/ES/Senado/Result/Personas.pm blib/lib/ES/Senado/Result/Personas.pm 
 	$(NOECHO) $(TOUCH) pm_to_blib
 
 
