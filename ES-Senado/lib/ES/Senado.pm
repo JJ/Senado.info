@@ -14,6 +14,8 @@ use version; our $VERSION = qv('0.0.3');
 
 use base qw/DBIx::Class::Schema Exporter/;
 
+our @EXPORT_OK = qw(extrae_nombres_listado);
+
 # Module implementation here
 __PACKAGE__->load_namespaces();
 

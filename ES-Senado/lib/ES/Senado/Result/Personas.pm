@@ -64,7 +64,33 @@ __PACKAGE__->add_columns(id =>
 			   is_nullable => 0,
 			   is_auto_increment => 0
 			 },
-			 
+			 lugar_nacimiento =>
+			 { accessor => 'lugar_nacimiento',
+			   data_type => 'varchar',
+			   size      => 64,
+			   is_nullable => 0,
+			   is_auto_increment => 0
+			 },
+			 estado_civil =>
+			 { accessor => 'estado_civil',
+			   data_type => 'varchar',
+			   size      => 64,
+			   is_nullable => 0,
+			   is_auto_increment => 0
+			 },
+			 descendencia =>
+			 { accessor => 'descendencia',
+			   data_type => 'varchar',
+			   size      => 64,
+			   is_nullable => 0,
+			   is_auto_increment => 0
+			 },
+			 fecha_nacimiento => 
+			 { accessor => 'fecha_nacimiento',
+			   data_type => 'date',
+			   is_nullable => 0,
+			   is_auto_increment => 0
+			 }
 			);
 
 __PACKAGE__->set_primary_key( qw/ id / );
