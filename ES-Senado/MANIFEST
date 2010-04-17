@@ -1,0 +1,9 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/ES/Senado.pm
+t/00.load.t
+t/perlcritic.t
+t/pod-coverage.t
+t/pod.t
