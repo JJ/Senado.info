@@ -17,6 +17,13 @@ __PACKAGE__->add_columns(id =>
 			   is_nullable => 0,
 			   is_auto_increment => 1
 			 },
+			 url =>
+			 { accessor  => 'url',
+			   data_type => 'varchar',
+			   size      => 255,
+			   is_nullable => 0,
+			   is_auto_increment => 0
+			 },
 			 nombre =>
 			 { accessor  => 'nombre',
 			   data_type => 'varchar',
@@ -38,7 +45,7 @@ __PACKAGE__->add_columns(id =>
 			   is_nullable => 0,
 			   is_auto_increment => 0
 			 },
-			 origen =>
+			 nombramiento =>
 			 { accessor  => 'origen',
 			   data_type => "enum( 'electo','designado') ",
 			   is_nullable => 0,
@@ -73,13 +80,6 @@ __PACKAGE__->add_columns(id =>
 			 },
 			 estado_civil =>
 			 { accessor => 'estado_civil',
-			   data_type => 'varchar',
-			   size      => 64,
-			   is_nullable => 0,
-			   is_auto_increment => 0
-			 },
-			 descendencia =>
-			 { accessor => 'descendencia',
 			   data_type => 'varchar',
 			   size      => 64,
 			   is_nullable => 0,

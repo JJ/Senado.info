@@ -59,6 +59,6 @@ is( $#todos_y_todas, -1, "Borrados" );
 eval { $dbh->do("DROP DATABASE $dbname") };
 print "No se puede cerrar la base de datos: $@\n" if $@;
 $dbh->disconnect();
-__DATA__
+
 
 

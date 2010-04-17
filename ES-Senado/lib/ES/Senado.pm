@@ -26,11 +26,12 @@ sub extrae_nombres_listado {
 
   my @senadores;
   for my $s ( @lista_con_formato ) {
-    my ( $url_ficha, $apellidos, $nombre, $nombramiento, $zona ) = ($s =~ m{'([^']+)'\)">([^,]+), ([^)]+)+ \((\w+)\)</a>\s+. (\w+) por (.+)});
+    my ( $url_ficha, $apellidos, $nombre, $grupo, $nombramiento, $zona ) = ($s =~ m{'([^']+)'\)">([^,]+), ([^)]+)+ \((\w+)\)</a>\s+. (\w+) por (.+)});
     push @senadores, { url => $url_ficha,
 		       apellidos => $apellidos,
 		       nombre => $nombre,
-		       nombramiento => $nombramiento,
+		       grupo => $grupo,
+		       nombramiento => lcfirst($nombramiento),
 		       zona => $zona };
   }
   return @senadores;
@@ -39,14 +40,40 @@ sub extrae_nombres_listado {
 sub extrae_info_ficha {
   my $ficha = shift || croak "Hace falta una cadena";
 
-  my @items = ($ficha =~ m{<li>(.+?)</li>}g);
-  my ($lugar_nacimiento, $fecha_nacimiento_dia, $fecha_nacimiento_mes, $fecha_nacimiento_year ) = 
-    ( $items[2] =~ m{>([^<]+)</font>\sel (\d+) de (\w+) de (\d+)});
-  my ($estado_civil, $descendencia) = ( $items[3] =~ /([^.]+)\.(.+)/ );
-  $descendencia = $descendencia || "Ninguna";
-  my ($formacion) = ($items[4] =~ />([^<]+)/);
-  return ($lugar_nacimiento, $fecha_nacimiento_dia, $fecha_nacimiento_mes, 
-	  $fecha_nacimiento_year, $estado_civil, $descendencia, $formacion );
+  my @items = ($ficha =~ m{<li>(.+?)</li>}gs);
+  my $base_item;
+  if ( $items[2] =~ /Nacid/ ) {
+    $base_item = 2;
+  } else {
+    $base_item = 3;
+  }
+  my ( $lugar_nacimiento,$fecha_nacimiento_dia, $fecha_nacimiento_mes, 
+       $fecha_nacimiento_year,$estado_civil,$formacion );
+       
+  if ( $items[$base_item] =~ /Nacid/ ) { 
+    ($lugar_nacimiento) = ( $items[$base_item] =~ m{>([^<]+)</font>\s});
+    $lugar_nacimiento = $lugar_nacimiento || 'Indefinido';
+    ($fecha_nacimiento_dia, $fecha_nacimiento_mes, $fecha_nacimiento_year ) = 
+      ( $items[$base_item] =~ m{el (\d+) de (\w+) de (\d+)});
+    if ( !$fecha_nacimiento_year ) {
+      $fecha_nacimiento_dia = 1;
+      $fecha_nacimiento_mes = 1;
+      $fecha_nacimiento_year = 1111;
+    }
+    ($estado_civil) = $items[$base_item+1];
+    ($formacion) = ($items[$base_item+2] =~ />([^<]+)/);
+  } elsif ( $items[2] =~ /Formaci/ ) {
+    $fecha_nacimiento_dia = 1;
+    $fecha_nacimiento_mes = 1;
+    $fecha_nacimiento_year = 1111;
+    $lugar_nacimiento = 'España';
+    $estado_civil='Indefinido';
+    ($formacion) = ($items[2] =~ />([^<]+)/);
+  }
+  return ( lugar_nacimiento => $lugar_nacimiento, 
+	   fecha_nacimiento => "$fecha_nacimiento_year-$fecha_nacimiento_mes-$fecha_nacimiento_dia",
+	   estado_civil => $estado_civil || "Indefinido",
+	   grupo => $formacion );
 }
 
 
