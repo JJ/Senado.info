@@ -15,6 +15,13 @@ use version; our $VERSION = qv('0.0.3');
 use base qw/DBIx::Class::Schema Exporter/;
 
 our @EXPORT_OK = qw(extrae_nombres_listado extrae_info_ficha);
+our @meses = qw( enero febrero marzo abril mayo junio julio 
+		 agosto septiembre octubre noviembre diciembre); 
+
+my %orden_de;
+for ( my $i = 0; $i <= $#meses; $i++ ) {
+  $orden_de{$meses[$i]} = $i + 1;
+}
 
 # Module implementation here
 __PACKAGE__->load_namespaces();
@@ -47,33 +54,32 @@ sub extrae_info_ficha {
   } else {
     $base_item = 3;
   }
-  my ( $lugar_nacimiento,$fecha_nacimiento_dia, $fecha_nacimiento_mes, 
-       $fecha_nacimiento_year,$estado_civil,$formacion );
+  my ( $fecha_nacimiento_dia, $fecha_nacimiento_mes, 
+       $fecha_nacimiento_year,$estado_civil);
        
+  #Extraemos formación primero
+  my ($formacion) =  ($ficha =~ m{<li>Partido.+?>([^<]+)</font>}sg);
+  
+  my ($lugar_nacimiento) = ($ficha =~ m{<li>Nacid. en <font[^>]+>([^<]+)</font>}sg);
+  $lugar_nacimiento = $lugar_nacimiento || 'Indefinido';
+  #Luego, más o menos el resto
   if ( $items[$base_item] =~ /Nacid/ ) { 
-    ($lugar_nacimiento) = ( $items[$base_item] =~ m{>([^<]+)</font>\s});
-    $lugar_nacimiento = $lugar_nacimiento || 'Indefinido';
     ($fecha_nacimiento_dia, $fecha_nacimiento_mes, $fecha_nacimiento_year ) = 
       ( $items[$base_item] =~ m{el (\d+) de (\w+) de (\d+)});
-    if ( !$fecha_nacimiento_year ) {
-      $fecha_nacimiento_dia = 1;
-      $fecha_nacimiento_mes = 1;
-      $fecha_nacimiento_year = 1111;
-    }
     ($estado_civil) = $items[$base_item+1];
-    ($formacion) = ($items[$base_item+2] =~ />([^<]+)/);
   } elsif ( $items[2] =~ /Formaci/ ) {
-    $fecha_nacimiento_dia = 1;
-    $fecha_nacimiento_mes = 1;
-    $fecha_nacimiento_year = 1111;
-    $lugar_nacimiento = 'España';
     $estado_civil='Indefinido';
-    ($formacion) = ($items[2] =~ />([^<]+)/);
   }
+  if ( !$fecha_nacimiento_year ) {
+    $fecha_nacimiento_dia = 1;
+    $fecha_nacimiento_mes = 'enero';
+    $fecha_nacimiento_year = 1111;
+  }
+  my $mes_en_numero = $orden_de{$fecha_nacimiento_mes};
   return ( lugar_nacimiento => $lugar_nacimiento, 
-	   fecha_nacimiento => "$fecha_nacimiento_year-$fecha_nacimiento_mes-$fecha_nacimiento_dia",
+	   fecha_nacimiento => "$fecha_nacimiento_year-$mes_en_numero-$fecha_nacimiento_dia",
 	   estado_civil => $estado_civil || "Indefinido",
-	   grupo => $formacion );
+	   partido => $formacion );
 }
 
 

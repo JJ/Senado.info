@@ -61,7 +61,7 @@ __PACKAGE__->add_columns(id =>
 			 partido =>
 			 { accessor => 'partido',
 			   data_type => 'varchar',
-			   size      => 16,
+			   size      => 64,
 			   is_nullable => 0,
 			   is_auto_increment => 0
 			 },
