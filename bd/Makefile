@@ -5,10 +5,10 @@ TABLE= persona
 all: db table 
 
 db:
-	echo 'create database $(DBNAME)' | mysql 
+	echo 'create database $(DBNAME)' | mysql -u root
 
 table:
-	for i in $(TABLE); do ( echo ">>>>>Creating $$i"; mysql   < $$i\.sql $(DBNAME)); done
+	for i in $(TABLE); do ( echo ">>>>>Creating $$i"; mysql -u root   < $$i\.sql $(DBNAME)); done
 
 clean:
-	echo 'drop database $(DBNAME)' | mysql 
+	echo 'drop database $(DBNAME)' | mysql -u root
