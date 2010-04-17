@@ -5,5 +5,6 @@ CREATE TABLE `sena2`.`personas` (
 `origen` ENUM( 'electo', 'designado' ) NOT NULL ,
 `zona` VARCHAR( 64 ) NOT NULL ,
 `partido` VARCHAR( 16 ) NOT NULL ,
+`genero` enum( 'f','m' ) not null,
 `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
 )

@@ -11,4 +11,4 @@ table:
 	for i in $(TABLE); do ( echo ">>>>>Creating $$i"; mysql   < $$i\.sql $(DBNAME)); done
 
 clean:
-	echo 'drop database $(DBNAME)' | mysql template1
+	echo 'drop database $(DBNAME)' | mysql 

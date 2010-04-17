@@ -21,7 +21,7 @@ __END__
 
 =head1 NAME
 
-ES::Senado - [One line description of module's purpose here]
+ES::Senado - Clase base para representar los datos del Senado español
 
 
 =head1 VERSION
@@ -33,10 +33,8 @@ This document describes ES::Senado version 0.0.1
 
     use ES::Senado;
 
-=for author to fill in:
-    Brief code example(s) here showing commonest usage(s).
-    This section will be as far as many users bother reading
-    so make it as educational and exeplary as possible.
+    my $senadores = ES::Senado::find( { nombre => 'Juan' } );
+    my $senadoras = ES::Senado::find( { genero => 'f' } );
   
   
 =head1 DESCRIPTION
