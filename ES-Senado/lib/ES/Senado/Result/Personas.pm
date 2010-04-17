@@ -94,6 +94,8 @@ __PACKAGE__->add_columns(id =>
 			);
 
 __PACKAGE__->set_primary_key( qw/ id / );
+__PACKAGE__->has_many('participaciones', 'ES::Senado::Result::Participacion_Iniciativas', 'persona_id');
+
 
 
 "La democracia se basa en el equilibrio de poderes"; # Magic true value required at end of module

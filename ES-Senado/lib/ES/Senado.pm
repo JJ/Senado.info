@@ -14,7 +14,9 @@ use version; our $VERSION = qv('0.0.3');
 
 use base qw/DBIx::Class::Schema Exporter/;
 
-our @EXPORT_OK = qw(extrae_nombres_listado extrae_info_ficha);
+our @EXPORT_OK = qw(extrae_nombres_listado extrae_info_ficha
+		    extrae_intervenciones);
+
 our @meses = qw( enero febrero marzo abril mayo junio julio 
 		 agosto septiembre octubre noviembre diciembre); 
 
@@ -82,6 +84,35 @@ sub extrae_info_ficha {
 	   partido => $formacion );
 }
 
+sub extrae_intervenciones {
+  my $ficha = shift || croak "Hace falta una cadena";
+  my ($prologo, $resto);
+  if ( $ficha =~ /<br><hr><br>/ ) {
+    ($prologo, $resto) = split( "<br><hr><br>", $ficha );
+  } else {
+    $prologo = '';
+    $resto = $ficha;
+  }
+  my @secciones = split( "<br><br><br>", $resto);
+  
+  my %intervenciones_hash = ( prologo => $prologo);
+			      
+  for my $s (@secciones ) {
+    my ($nombre_seccion, $intervenciones) = 
+      ( $s =~ m{<b>([^.]+)\.</b></a>\s+<br>(.+)}s );
+    $intervenciones_hash{'secciones'}{$nombre_seccion} = [];
+    
+    my @intervenciones = split(/\s+<br><br>\s+/, $intervenciones );
+    for my $i ( @intervenciones ) {
+      my ($nombre, $fases ) = ($i =~  m{^\s*(.+?)</a>\s+(<table.+)}s);
+      my @fases = split( "<br><br>", $fases );
+      push( @{$intervenciones_hash{'secciones'}{$nombre_seccion}},
+	    { nombre => $nombre,
+	      fases => \@fases } );
+    }
+  }
+  return %intervenciones_hash;
+}
 
 "La Nación española, deseando establecer la justicia, la libertad y la seguridad y promover el bien de cuantos la integran, en uso de su soberanía, proclama su voluntad de:Garantizar la convivencia democrática dentro de la Constitución y de las leyes conforme a un orden económico y social justo. Consolidar un Estado de Derecho que asegure el imperio de la ley como expresión de la voluntad popular. Proteger a todos los españoles y pueblos de España en el ejercicio de los derechos humanos, sus culturas y tradiciones, lenguas e instituciones. Promover el progreso de la cultura y de la economía para asegurar a todos una digna calidad de vida. Establecer una sociedad democrática avanzada, y Colaborar en el fortalecimiento de unas relaciones pacíficas y de eficaz cooperación entre todos los pueblos de la Tierra. "; # Magic true value required at end of module
 __END__
