@@ -1,0 +1,112 @@
+
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1', {'packages':['table']});
+      
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+      
+      // Callback that creates and populates a data table, 
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+      // Create our data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Zona');
+        data.addColumn('number', 'Senador');
+        data.addRows([
+		['Valladolid ', 4],
+		['Jaén ', 4],
+		['Alicante ', 4],
+		['Toledo ', 4],
+		['Madrid ', 4],
+		['la Comunitat Valenciana', 5],
+		['la Comunidad Autónoma de Canarias', 3],
+		['la Comunidad Autónoma de Cataluña', 8],
+		['Fuerteventura (LAS PALMAS)', 1],
+		['Zamora ', 4],
+		['León ', 4],
+		['Teruel ', 4],
+		['La Palma (SANTA CRUZ DE TENERIFE)', 1],
+		['Ávila ', 4],
+		['Córdoba ', 4],
+		['Sevilla ', 4],
+		['Tenerife (SANTA CRUZ DE TENERIFE)', 3],
+		['Castellón ', 4],
+		['Gran Canaria (LAS PALMAS)', 3],
+		['Lugo ', 4],
+		['Menorca (ILLES BALEARS)', 1],
+		['la Comunidad de Madrid', 7],
+		['Segovia ', 4],
+		['la Comunidad Autónoma de La Rioja', 1],
+		['Asturias ', 4],
+		['Valencia ', 4],
+		['La Gomera (SANTA CRUZ DE TENERIFE)', 1],
+		['Burgos ', 4],
+		['La Rioja ', 4],
+		['Ciudad Real ', 4],
+		['Albacete ', 4],
+		['Almería ', 4],
+		['Vizcaya ', 4],
+		['Soria ', 4],
+		['Cantabria ', 4],
+		['la Comunidad Autónoma de Andalucía', 9],
+		['la Comunidad Autónoma de Castilla-La Mancha', 2],
+		['Cádiz ', 4],
+		['Huesca ', 4],
+		['Cuenca ', 4],
+		['la Comunidad Autónoma de la Región de Murcia', 2],
+		['la Comunidad Autónoma de Extremadura', 2],
+		['Badajoz ', 4],
+		['Huelva ', 4],
+		['Álava ', 4],
+		['A Coruña ', 4],
+		['Mallorca (ILLES BALEARS)', 3],
+		['Guadalajara ', 4],
+		['Navarra ', 4],
+		['la Comunidad Foral de Navarra', 1],
+		['la Comunidad Autónoma de Aragón', 2],
+		['Ourense ', 4],
+		['Barcelona ', 4],
+		['Guipúzcoa ', 4],
+		['la Comunidad Autónoma del Principado de Asturias', 2],
+		['la Comunidad Autónoma de Cantabria', 1],
+		['Zaragoza ', 4],
+		['Málaga ', 4],
+		['Salamanca ', 4],
+		['la Comunidad Autónoma de Castilla y León', 3],
+		['Palencia ', 4],
+		['Murcia ', 4],
+		['la Comunidad Autónoma de Galicia', 3],
+		['Cáceres ', 4],
+		['la Comunidad Autónoma del País Vasco', 3],
+		['Tarragona ', 4],
+		['Lleida ', 4],
+		['la Comunidad Autónoma de las Illes Balears', 2],
+		['Melilla ', 2],
+		['Granada ', 4],
+		['Girona ', 4],
+		['Ceuta ', 2],
+		['Lanzarote (LAS PALMAS)', 1],
+		['Pontevedra ', 3],
+		['El Hierro (SANTA CRUZ DE TENERIFE)', 1],
+		['Ibiza-Formentera (ILLES BALEARS)', 1]        ]);
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.Table(document.getElementById('chart_div'));
+        chart.draw(data, {width: 400, height: 240, is3D: true, title: 'Distribucion Partidos Politicos'});
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>
