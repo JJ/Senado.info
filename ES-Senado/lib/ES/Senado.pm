@@ -14,7 +14,7 @@ use version; our $VERSION = qv('0.0.3');
 
 use base qw/DBIx::Class::Schema Exporter/;
 
-our @EXPORT_OK = qw(extrae_nombres_listado);
+our @EXPORT_OK = qw(extrae_nombres_listado extrae_info_ficha);
 
 # Module implementation here
 __PACKAGE__->load_namespaces();
@@ -33,8 +33,22 @@ sub extrae_nombres_listado {
 		       nombramiento => $nombramiento,
 		       zona => $zona };
   }
-  return \@senadores;
+  return @senadores;
 }
+
+sub extrae_info_ficha {
+  my $ficha = shift || croak "Hace falta una cadena";
+
+  my @items = ($ficha =~ m{<li>(.+?)</li>}g);
+  my ($lugar_nacimiento, $fecha_nacimiento_dia, $fecha_nacimiento_mes, $fecha_nacimiento_year ) = 
+    ( $items[2] =~ m{>([^<]+)</font>\sel (\d+) de (\w+) de (\d+)});
+  my ($estado_civil, $descendencia) = ( $items[3] =~ /([^.]+)\.(.+)/ );
+  $descendencia = $descendencia || "Ninguna";
+  my ($formacion) = ($items[4] =~ />([^<]+)/);
+  return ($lugar_nacimiento, $fecha_nacimiento_dia, $fecha_nacimiento_mes, 
+	  $fecha_nacimiento_year, $estado_civil, $descendencia, $formacion );
+}
+
 
 "La Nación española, deseando establecer la justicia, la libertad y la seguridad y promover el bien de cuantos la integran, en uso de su soberanía, proclama su voluntad de:Garantizar la convivencia democrática dentro de la Constitución y de las leyes conforme a un orden económico y social justo. Consolidar un Estado de Derecho que asegure el imperio de la ley como expresión de la voluntad popular. Proteger a todos los españoles y pueblos de España en el ejercicio de los derechos humanos, sus culturas y tradiciones, lenguas e instituciones. Promover el progreso de la cultura y de la economía para asegurar a todos una digna calidad de vida. Establecer una sociedad democrática avanzada, y Colaborar en el fortalecimiento de unas relaciones pacíficas y de eficaz cooperación entre todos los pueblos de la Tierra. "; # Magic true value required at end of module
 __END__
@@ -74,6 +88,16 @@ Extrae los nombres del listado alfabético de senadores. Devuelve una lista de h
     nombre => $nombre,
     nombramiento => $nombramiento,
     zona => $zona };
+
+=head2 extrae_info_ficha( $cadena )
+
+De la ficha de cada senador extrae información que no aparece en el
+listado alfabético. Devuelve un array con 
+
+    $lugar_nacimiento, $fecha_nacimiento_dia, $fecha_nacimiento_mes, 
+    $fecha_nacimiento_year, $estado_civil, $descendencia, $formacion 
+
+
 
 =head1 DIAGNOSTICS
 
