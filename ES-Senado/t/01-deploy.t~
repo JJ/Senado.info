@@ -1,0 +1,15 @@
+#!perl 
+
+use strict;
+use warnings;
+
+use Test::More qw( no_plan ); #Random initial string...
+use lib qw( lib ../lib ../../lib  ); #Just in case we are testing it in-place
+
+use ES::Senado;
+
+my $dsn = 'dbi:SQLite:dbname=:memory:';
+my $schema = ES::Senado->connect($dsn);
+$schema->deploy({ add_drop_tables => 1});
+
+

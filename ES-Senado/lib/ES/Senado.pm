@@ -15,7 +15,7 @@ use version; our $VERSION = qv('0.0.3');
 use base qw/DBIx::Class::Schema Exporter/;
 
 # Module implementation here
-
+__PACKAGE__->load_namespaces();
 
 1; # Magic true value required at end of module
 __END__
