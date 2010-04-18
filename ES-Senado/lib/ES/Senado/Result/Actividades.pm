@@ -41,6 +41,8 @@ __PACKAGE__->add_columns(titulo =>
 
 __PACKAGE__->set_primary_key( qw/ url / );
 __PACKAGE__->has_many('intervencion_actividades', 'ES::Senado::Result::Intervencion_Actividades', 'actividad');
+__PACKAGE__->has_many('descriptoress_actividad', 'ES::Senado::Result::Descriptores_Actividad', 'actividad');
+
 
 
 "El Senado se compone de un número variable de senadores, elegidos por un sistema mixto"; # Magic true value required at end of module
