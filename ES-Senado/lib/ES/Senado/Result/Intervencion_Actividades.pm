@@ -23,21 +23,14 @@ __PACKAGE__->add_columns(id =>
 			   is_nullable => 0,
 			 },
 			 persona_id =>
-			 { accessor  => 'id',
+			 { accessor  => 'persona_id',
 			   data_type => 'int unsigned',
 			   is_nullable => 0,
-			 },
-			 url =>
-			 { accessor  => 'url',
-			   data_type => 'varchar',
-			   size      => 255,
-			   is_nullable => 0,
-			   is_auto_increment => 0
-			 },
+			 },			 
 			 fecha => 
 			 { accessor => 'fecha',
 			   data_type => 'date',
-			   is_nullable => 0,
+			   is_nullable => 1,
 			   is_auto_increment => 0
 			 },
 			 fase => 

@@ -14,13 +14,14 @@ use LWP::Simple qw(get);
 my $dbname = 'sena2';
 my $dsn = "dbi:mysql:dbname=$dbname";
 my $schema = ES::Senado->connect($dsn);
-eval {
-  $schema->deploy();
-};
+#eval {
+#  $schema->deploy();
+#};
 #$schema->deploy({ sources => ['actividades'],
 #		  add_drop_tables => 1});
 my $rs_persona = $schema->resultset('Personas');
 my $rs_actividad = $schema->resultset('Actividades');
+my $rs_intervencion = $schema->resultset('Intervencion_Actividades');
 
 my @senadores = $rs_persona->all;
 
@@ -35,9 +36,9 @@ for my $s (@senadores) { #loncha arbitrario
   my $ficha = get( "$url_base$this_url" ) || die "No puedo bajar $this_url";
   my %intervenciones = extrae_intervenciones( $ficha );
 
-  for my $s ( keys %{$intervenciones{'secciones'}} ) {
-    for my $i ( @{$intervenciones{'secciones'}{$s}} ) {
-      my %actividad = ( tipo => $s );
+  for my $sec ( keys %{$intervenciones{'secciones'}} ) {
+    for my $i ( @{$intervenciones{'secciones'}{$sec}} ) {
+      my %actividad = ( tipo => $sec );
       my ( $titulo, $url ) = 
 	( $i->{'nombre'} =~ m{([^<]+).+\'([^']+)\'} );
       $actividad{'titulo'} = $titulo;
@@ -51,7 +52,22 @@ for my $s (@senadores) { #loncha arbitrario
 	if ( $@ ) {
 	  print "Error $@ en el url $this_url. Comprobar";
 	}
-	print "Insertado $s $titulo\n";  
+	print "Insertado $sec $titulo\n";  
+      }
+      for my $f (@{$i->{'fases'}} ) {
+	next if !($f =~ /Fase/);
+	my ($esta_fase) = ( $f =~ /Fase:\s+([^<&]+)/s );
+	my %esta_intervencion = ( actividad => $url,
+				  persona_id => $s->id,
+				  fase => $esta_fase );
+	my $nueva_interv = $rs_intervencion->new( \%esta_intervencion );
+	eval {
+	  $nueva_interv->insert;
+	};
+	if ( $@ ) {
+	  print "Error $@ en la fase $esta_fase con $this_url . Comprobar";
+	}
+	print "Insertado $esta_fase\n";  
       }
     }
   }
