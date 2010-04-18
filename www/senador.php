@@ -51,8 +51,12 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
 	<div id="header">
 		
 		<div class="cont">
-
-			<a href="" id="logo"><img src="img/logoweb.png"></a>
+			
+			<div id="search">
+				<a href="/info.php">Acerca de</a>
+			</div><!-- #search -->
+			
+			<a href="/" id="logo"><img src="img/logoweb.png"></a>
 			
 			<div id="search">
 				
