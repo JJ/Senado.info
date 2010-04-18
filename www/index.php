@@ -27,14 +27,16 @@ $ultimas = executeQuery("select personas.nombre,personas.apellidos,personas.grup
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=latin-1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <title>Senado.info</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
 
   <meta name="robots" content="NOODP, " />
   <meta http-equiv="Content-Language" content="es" />
+  
   <link href="stylesheets/style.css" media="screen" rel="Stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="favicon.ico">
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js"></script>
@@ -84,7 +86,7 @@ $ultimas = executeQuery("select personas.nombre,personas.apellidos,personas.grup
 			<div class="block">
 				
 				<h2>
-					<span>Senadores con <span class="more">más</span></span>
+					<span>Senadores con <span class="more">m&aacute;s</span></span>
 					intervenciones
 				</h2>
 				
@@ -92,7 +94,7 @@ $ultimas = executeQuery("select personas.nombre,personas.apellidos,personas.grup
 				<?php
 					foreach ($mas_intervenciones as $item)
 					{
-						echo "<tr><td class=\"num\">".$item['veces']."</td><td><a href=\"senador.php?id=".$item['id']."\">".ucwords(strtolower($item['nombre']))." ".ucwords(strtolower($item['apellidos']))."</a><br>".ucwords(strtolower($item['zona']))." · ".$item['grupo']."</td></tr>\n";
+						echo "<tr><td class=\"num\">".$item['veces']."</td><td><a href=\"senador.php?id=".$item['id']."\">".ucwords(mb_strtolower($item['nombre'],"iso-8859-1"))." ".ucwords(mb_strtolower($item['apellidos'],"iso-8859-1"))."</a><br>".ucwords(mb_strtolower($item['zona'],"iso-8859-1"))." &middot; ".$item['grupo']."</td></tr>\n";
 					}
 				?>
 					
@@ -111,16 +113,16 @@ $ultimas = executeQuery("select personas.nombre,personas.apellidos,personas.grup
 				<?php
 					foreach ($menos_intervenciones as $item)
 					{
-						echo "<tr><td class=\"num\">".$item['veces']."</td><td><a href=\"senador.php?id=".$item['id']."\">".ucwords(strtolower($item['nombre']))." ".ucwords(strtolower($item['apellidos']))."</a><br>".ucwords(strtolower($item['zona']))." · ".$item['grupo']."</td></tr>\n";
+						echo "<tr><td class=\"num\">".$item['veces']."</td><td><a href=\"senador.php?id=".$item['id']."\">".ucwords(mb_strtolower($item['nombre'],"iso-8859-1"))." ".ucwords(mb_strtolower($item['apellidos'],"iso-8859-1"))."</a><br>".ucwords(mb_strtolower($item['zona'],"iso-8859-1"))." &middot; ".$item['grupo']."</td></tr>\n";
 					}
 				?>
 				</table>
 				
 				<div class="cont">
 					
-					<p>Hay <a href="#"><?php echo $solo_una?> senadores</a> que no han intervenido en toda la legislatura. <a href="#">¿Qué significa esto?</a></p>
+					<p>Hay <a href="#"><?php echo $solo_una?> senadores</a> que no han intervenido en toda la legislatura. <a href="#">&iquest;Qu&eacute; significa esto?</a></p>
 					
-					<!-- <p>De los senadores que no han intervenido, hay 123 que tampoco han presentado ninguna iniciativa ni ostentan ningún cargo.</p> -->
+					<!-- <p>De los senadores que no han intervenido, hay 123 que tampoco han presentado ninguna iniciativa ni ostentan ningÃºn cargo.</p> -->
 					
 				</div><!-- .cont -->
 			
@@ -131,7 +133,7 @@ $ultimas = executeQuery("select personas.nombre,personas.apellidos,personas.grup
 			<div class="block">
 				
 				<h2>
-					<span>Últimas</span>
+					<span>&Uacute;ltimas</span>
 					intervenciones
 				</h2>
 				
@@ -141,7 +143,7 @@ $ultimas = executeQuery("select personas.nombre,personas.apellidos,personas.grup
 				<?php
 					foreach ($ultimas as $item)
 					{
-						echo "<tr><td><a href=\"#\">".ucwords(strtolower($item['nombre']))." ".ucwords(strtolower($item['apellidos']))."</a><br>".ucwords(strtolower($item['zona']))." · ".$item['grupo']."</td><td>".$item['fase']."</td></tr>\n";
+						echo "<tr><td><a href=\"#\">".ucwords(mb_strtolower($item['nombre'],"iso-8859-1"))." ".ucwords(strtolower($item['apellidos']))."</a><br>".ucwords(mb_strtolower($item['zona'],"iso-8859-1"))." &middot; ".$item['grupo']."</td><td>".$item['fase']."</td></tr>\n";
 					}
 				?>
 				</table>

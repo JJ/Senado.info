@@ -14,13 +14,7 @@ $intervenciones = $result[0]['intervenciones'];
 $result = executeQuery("select count(titulo) as iniciativas from actividades;");
 $iniciativas = $result[0]['iniciativas'];
 
-$id = (isset($_GET['id']))?$_GET['id']:1;
-
-$senador = searchSenatorById($id);
-
-$result = executeQuery("select count(id) as veces from intervencion_actividades where persona_id=$id;");
-$ints_senador = $result[0]['veces'];
-$int_senador = executeQuery("select actividad,fase from intervencion_actividades where persona_id=$id;");
+$senadores = executeQuery("select nombre, apellidos, id from personas;");
 
 ?>
 
@@ -92,46 +86,18 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
 		<div id="main_content">
 			
 			<div class="senador">
-  <h1><?php echo ucwords(mb_strtolower($senador['nombre'], "iso-8859-1"))." ".ucwords(mb_strtolower($senador['apellidos'], "iso-8859-1"))?></h1>
-				<div class="meta">
-					<?php echo ucwords(mb_strtolower($senador['zona'], "iso-8859-1"))." � ".$senador['grupo']?>
-				</div>
+
+  <h1> <span>Lista <span class="more">completa</span></span> de senadores </h2>
 				
-				<div class="actividad_senador">
+				<table>
+				<?php
+					foreach ($senadores as $item)
+					{
+						echo "<tr><td class=\"num\">".$item['veces']."</td><td><a href=\"senador.php?id=".$item['id']."\">".ucwords(strtolower($item['nombre']))." ".ucwords(strtolower($item['apellidos']))."</a><br>".ucwords(strtolower($item['zona']))." � ".$item['grupo']."</td></tr>\n";
+					}
+				?>
 					
-					<div class="intervenciones">
-						<h2><span><?php echo $ints_senador ?></span> intervenciones</h2>
-						<ul>
-						<?php
-							foreach ($int_senador as $item)
-							{
-								echo "<li><a href=\"http://www.senado.es/".$item['actividad']."\">".$item['fase']."</a></li>";
-							}
-						?>
-						</ul>
-					</div>
-					
-					<div class="iniciativas">
-						<h2><span>1.234</span> iniciativas</h2>
-<!--						<ul>
-							<li><a href="#">Titulo del intervenci처n</a></li>
-							<li><a href="#">Titulo del intervenci처n</a></li>
-							<li><a href="#">Titulo del intervenci처n</a></li>
-							<li><a href="#">Titulo del intervenci처n</a></li>
-						</ul>-->
-					</div>
-					
-					<div class="cargos">
-						<h2><span>1.234</span> cargos</h2>
-<!--						<ul>
-							<li><a href="#">Titulo del intervenci처n</a></li>
-							<li><a href="#">Titulo del intervenci처n</a></li>
-							<li><a href="#">Titulo del intervenci처n</a></li>
-							<li><a href="#">Titulo del intervenci처n</a></li>-->
-						</ul>
-					</div>
-				
-				</div><!-- .actividad_senador -->
+				</table>
 				
 			</div><!-- .senador -->
 		
