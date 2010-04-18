@@ -55,14 +55,11 @@ $ultimas = executeQuery("select personas.id,personas.nombre,personas.apellidos,p
 			
 			<a href="/" id="logo"><img src="img/logoweb.png"></a>
 			
-			<div id="search">
-				
-			</div><!-- #search -->
 			
 			<div id="tagline">
 				
 				<div class="senadores">
-					<span class="num"><?php echo $senadores ?></span><a href='/senadores.php'> senadores</a>
+					<span class="num"><?php echo $senadores ?></span> <a href='/senadores.php'>senadores</a>
 				</div>
 
 				<div class="intervenciones">

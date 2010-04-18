@@ -4,7 +4,7 @@ include("db.php");
 
 // Numero de senadores
 $result = executeQuery("select count(id) as senadores from personas;");
-$senadores = $result[0]['senadores'];
+$num_senadores = $result[0]['senadores'];
 
 // Numero de intervenciones
 $result = executeQuery("select count(id) as intervenciones from intervencion_actividades;");
@@ -47,16 +47,16 @@ $senadores = executeQuery("select nombre, apellidos, zona, grupo, id from person
 		
 		<div class="cont">
 
-			<a href="" id="logo"><img src="img/logoweb.png"></a>
-			
-			<div id="search">
-				
+                        <div id="search">
+				<a href="/info.php">Acerca de</a>
 			</div><!-- #search -->
 			
+			<a href="/" id="logo"><img src="img/logoweb.png"></a>
+
 			<div id="tagline">
 				
 				<div class="senadores">
-					<span class="num"><?php echo $senadores ?></span> senadores
+					<span class="num"><?php echo $num_senadores ?></span>  <a href='/senadores.php'>senadores</a>
 				</div>
 
 				<div class="intervenciones">

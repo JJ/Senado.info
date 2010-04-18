@@ -61,7 +61,7 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
 			<div id="tagline">
 				
 				<div class="senadores">
-					<span class="num"><?php echo $senadores ?></span> senadores
+					<span class="num"><?php echo $senadores ?></span> <a href='/senadores.php'>senadores</a>
 				</div>
 
 				<div class="intervenciones">
