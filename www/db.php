@@ -22,7 +22,7 @@ function close_db()
 */
 
 
-function listByName()
+function listSenatorByName()
 {
 	connect_db();
 	global $link;
@@ -38,7 +38,7 @@ function listByName()
 	return $ret;
 }
 
-function listBySurname()
+function listSenatorBySurname()
 {
 	connect_db();
 	global $link;
@@ -46,7 +46,7 @@ function listBySurname()
 	close_db();
 }
 
-function listByGroup()
+function listSenatorByGroup()
 {
 	connect_db();
 	global $link;
@@ -54,7 +54,7 @@ function listByGroup()
 	close_db();
 }
 
-function listByZone()
+function listSenatorByZone()
 {
 	connect_db();
 	global $link;
@@ -62,12 +62,38 @@ function listByZone()
 	close_db();
 }
 
-function listByParty()
+function listSenatorByParty()
 {
 	connect_db();
 	global $link;
 	$result = mysql_query("SELECT * FROM personas ORDER BY partido ASC;",$link) or die(mysql_error());
 	close_db();
+}
+
+function searchSenatorById($id)
+{
+	connect_db();
+	global $link;
+	$result = mysql_query("SELECT * FROM personas WHERE id='$id';",$link) or die(mysql_error());
+	close_db();
+	
+	return mysql_fetch_assoc($result);
+}
+
+function listActivitiesByType()
+{
+	connect_db();
+	global $link;
+	$result = mysql_query("SELECT * FROM actividades ORDER By tipo ASC;",$link) or die(mysql_error());
+	close_db();
+	
+	$i=0;
+	while ($item = mysql_fetch_assoc($result))
+	{
+		$ret[$i++]=$item;
+	}
+	
+	return $ret;
 }
 
 /*
@@ -80,7 +106,7 @@ function listByParty()
 	El ultimo parametro ($OR) determina que los elementos quen los elementos deben cumplir todas las
 	condiciones (false) o solo una (true).
 */
-function search($surname, $group, $zone, $party, $genre, $birthplace, $state, $birthdate, $OR=false)
+function searchSenators($surname, $group, $zone, $party, $genre, $birthplace, $state, $birthdate, $OR=false)
 {
 	$search = "";
 	
@@ -146,6 +172,69 @@ function search($surname, $group, $zone, $party, $genre, $birthplace, $state, $b
 	global $link;
 	connect_db();
 	$result = mysql_query("$search;",$link) or die(mysql_error());
+	close_db();
+	
+	$i=0;
+	while ($item = mysql_fetch_assoc($result))
+	{
+		$ret[$i++]=$item;
+	}
+	
+	return $ret;
+}
+
+/*
+	Realiza busquedas de actividades bajo diferentes criterios. No es sensible a mayusculas.
+
+	Los parametros son por orden: titulo, tipo y fecha.
+
+	Se tendran en cuenta cuando la cadena que se pasa como parametro no este vacia.
+
+	El ultimo parametro ($OR) determina que los elementos quen los elementos deben cumplir todas las
+	condiciones (false) o solo una (true).
+*/
+function searchActivities($title, $type, $date, $OR=false)
+{
+	$search = "";
+	
+	if ($title)
+		$search = "SELECT * FROM actividades WHERE title LIKE '%$title%' ";
+	
+	if ($type)
+	{
+		if ($search)
+			$search.=(($OR)?" UNION SELECT * FROM actividades WHERE tipo LIKE '%$type%';":" AND id IN ( SELECT id FROM actividades WHERE tipo LIKE '%$type%' )");
+		else
+			$search = "SELECT * FROM actividades WHERE tipo LIKE '%$type%' ";
+	}
+	
+	if ($date)
+	{
+		if ($search)
+			$search.=(($OR)?" UNION SELECT * FROM actividades WHERE fecha LIKE '%$date%';":" AND id IN ( SELECT id FROM actividades WHERE fecha LIKE '%$date%' )");
+		else
+			$search = "SELECT * FROM actividades WHERE fecha LIKE '%$date%' ";
+	}
+
+	global $link;
+	connect_db();
+	$result = mysql_query("$search;",$link) or die(mysql_error());
+	close_db();
+	
+	$i=0;
+	while ($item = mysql_fetch_assoc($result))
+	{
+		$ret[$i++]=$item;
+	}
+	
+	return $ret;
+}
+
+function executeQuery($query)
+{
+	global $link;
+	connect_db();
+	$result = mysql_query($query,$link) or die(mysql_error());
 	close_db();
 	
 	$i=0;
