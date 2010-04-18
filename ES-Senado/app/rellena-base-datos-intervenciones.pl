@@ -14,7 +14,13 @@ use LWP::Simple qw(get);
 my $dbname = 'sena2';
 my $dsn = "dbi:mysql:dbname=$dbname";
 my $schema = ES::Senado->connect($dsn);
+eval {
+  $schema->deploy();
+};
+#$schema->deploy({ sources => ['actividades'],
+#		  add_drop_tables => 1});
 my $rs_persona = $schema->resultset('Personas');
+my $rs_actividad = $schema->resultset('Actividades');
 
 my @senadores = $rs_persona->all;
 
@@ -31,8 +37,23 @@ for my $s (@senadores) { #loncha arbitrario
 
   for my $s ( keys %{$intervenciones{'secciones'}} ) {
     for my $i ( @{$intervenciones{'secciones'}{$s}} ) {
-      my $intervencion = { tipo => $s };
+      my %actividad = ( tipo => $s );
+      my ( $titulo, $url ) = 
+	( $i->{'nombre'} =~ m{([^<]+).+\'([^']+)\'} );
+      $actividad{'titulo'} = $titulo;
+      $actividad{'url'} = $url;
+      my $esta_actividad = $rs_actividad->find( $url );
+      if ( !$esta_actividad ) { #Añadir a la BD
+	my $nueva_actividad = $rs_actividad->new( \%actividad );
+	eval {
+	  $nueva_actividad->insert;
+	};
+	if ( $@ ) {
+	  print "Error $@ en el url $this_url. Comprobar";
+	}
+	print "Insertado $s $titulo\n";  
+      }
     }
   }
   
-}
+} # fin bucle senadores
