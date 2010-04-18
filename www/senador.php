@@ -14,20 +14,20 @@ $intervenciones = $result[0]['intervenciones'];
 $result = executeQuery("select count(titulo) as iniciativas from actividades;");
 $iniciativas = $result[0]['iniciativas'];
 
-$id = (isset($_POST['id']))?$_POST['id']:1;
+$id = (isset($_GET['id']))?$_GET['id']:1;
 
 $senador = searchSenatorById($id);
 
 $result = executeQuery("select count(id) as veces from intervencion_actividades where persona_id=$id;");
 $ints_senador = $result[0]['veces'];
-$int_senador = executeQuery("select actividad,fase from intervencion_actividades where persona_id=$id limit 0,4;");
+$int_senador = executeQuery("select actividad,fase from intervencion_actividades where persona_id=$id;");
 
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=latin-1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <title>Senado.info</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
@@ -36,6 +36,7 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
   <meta http-equiv="Content-Language" content="es" />
 
   <link href="stylesheets/style.css" media="screen" rel="Stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="favicon.ico">
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js"></script>
@@ -93,7 +94,7 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
 			<div class="senador">
 				<h1><?php echo ucwords(strtolower($senador['nombre']))." ".ucwords(strtolower($senador['apellidos']))?></h1>
 				<div class="meta">
-					<?php echo ucwords(strtolower($senador['zona']))." · ".$senador['grupo']?>
+					<?php echo ucwords(strtolower($senador['zona']))." Â· ".$senador['grupo']?>
 				</div>
 				
 				<div class="actividad_senador">
@@ -112,21 +113,21 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
 					
 					<div class="iniciativas">
 						<h2><span>1.234</span> iniciativas</h2>
-						<ul>
-							<li><a href="#">Titulo del intervención</a></li>
-							<li><a href="#">Titulo del intervención</a></li>
-							<li><a href="#">Titulo del intervención</a></li>
-							<li><a href="#">Titulo del intervención</a></li>
-						</ul>
+<!--						<ul>
+							<li><a href="#">Titulo del intervenciÃ³n</a></li>
+							<li><a href="#">Titulo del intervenciÃ³n</a></li>
+							<li><a href="#">Titulo del intervenciÃ³n</a></li>
+							<li><a href="#">Titulo del intervenciÃ³n</a></li>
+						</ul>-->
 					</div>
 					
 					<div class="cargos">
 						<h2><span>1.234</span> cargos</h2>
-						<ul>
-							<li><a href="#">Titulo del intervención</a></li>
-							<li><a href="#">Titulo del intervención</a></li>
-							<li><a href="#">Titulo del intervención</a></li>
-							<li><a href="#">Titulo del intervención</a></li>
+<!--						<ul>
+							<li><a href="#">Titulo del intervenciÃ³n</a></li>
+							<li><a href="#">Titulo del intervenciÃ³n</a></li>
+							<li><a href="#">Titulo del intervenciÃ³n</a></li>
+							<li><a href="#">Titulo del intervenciÃ³n</a></li>-->
 						</ul>
 					</div>
 				
