@@ -1,4 +1,4 @@
-package ES::Senado::Result::Participacion_Iniciativas;
+package ES::Senado::Result::Intervencion_Actividades;
 
 use warnings;
 use strict;
@@ -8,7 +8,7 @@ our $VERSION =   "0.0.1";
 
 use base qw/DBIx::Class::Core/;
 
-__PACKAGE__->table('participacion_iniciativas');
+__PACKAGE__->table('intervencion_actividades');
 # Traduciendo el diseño de la BD a Perl para que sea fácil hacer
 # deploy en cualquier sitio 
 __PACKAGE__->add_columns(id =>
@@ -17,8 +17,8 @@ __PACKAGE__->add_columns(id =>
 			   is_nullable => 0,
 			   is_auto_increment => 1
 			 },
-			 iniciativa =>
-			 { accessor  => 'iniciativa',
+			 actividad =>
+			 { accessor  => 'actividad',
 			   data_type => 'text',
 			   is_nullable => 0,
 			 },
@@ -51,7 +51,6 @@ __PACKAGE__->add_columns(id =>
 
 __PACKAGE__->set_primary_key( qw/ id / );
 
-
-"La democracia se basa en el equilibrio de poderes"; # Magic true value required at end of module
+"El mandato de los senadores termina cuatro años después de su elección o el día de la disolución de la Cámara, que puede tener lugar conjunta o separadamente de la disolución del Congreso de los Diputados; el derecho de disolución corresponde al Rey, que lo ejerce a petición del Presidente del Gobierno y bajo la exclusiva responsabilidad de éste."; # Magic true value required at end of module
 
 __END__

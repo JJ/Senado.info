@@ -94,7 +94,7 @@ __PACKAGE__->add_columns(id =>
 			);
 
 __PACKAGE__->set_primary_key( qw/ id / );
-__PACKAGE__->has_many('participaciones', 'ES::Senado::Result::Participacion_Iniciativas', 'persona_id');
+__PACKAGE__->has_many('intervenciones', 'ES::Senado::Result::Intervencion_Actividades', 'persona_id');
 
 
 
