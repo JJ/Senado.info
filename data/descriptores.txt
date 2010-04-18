@@ -1,0 +1,1875 @@
+descriptor,veces
+programa de actuación,545
+parlamentario,268
+empresa pública,204
+inversión pública,179
+presupuesto del Estado,157
+televisión,139
+ejecución de proyectos,120
+ejecución del presupuesto,117
+radiodifusión,105
+elaboración del presupuesto,102
+planificación nacional,81
+ayuda al desarrollo,80
+institución pública,78
+cooperación administrativa,75
+infraestructura de transportes,74
+administración local,73
+financiación pública,70
+universidad,68
+Unión Europea,68
+España,67
+Presidencia del Consejo de la Unión Europea,66
+política sanitaria,64
+recesión económica,63
+política educativa,63
+política económica,61
+modificación de la ley,57
+verificación de cuentas,57
+política de empleo,56
+Cataluña,54
+establecimiento penitenciario,54
+mujer,53
+cambio climático,52
+política de cooperación,52
+control presupuestario,52
+paro,49
+política exterior,48
+red ferroviaria,47
+ordenación hidráulica,44
+ayuda pública,44
+sociedad de la información,44
+protección del medio ambiente,43
+violencia doméstica,41
+política social,41
+plan anticrisis,41
+política de turismo,41
+construcción de carreteras,41
+fuerza de naturaleza militar,41
+protección del consumidor,40
+obras públicas,39
+programa audiovisual,38
+migrante,38
+administración regional,38
+comisión mixta,37
+sistema judicial,37
+política de medio ambiente,37
+igualdad hombre-mujer,35
+relación Estado-entidades territoriales,35
+adopción,34
+vivienda,34
+sector agrario,34
+cooperación internacional,34
+toxicomanía,34
+política fiscal,34
+administración central,33
+administración del personal,33
+Lugo (Provincia),33
+derecho de adopción,32
+política de la vivienda,32
+transporte rápido,32
+Canarias,32
+América Latina,32
+seguridad pública,31
+protección del patrimonio,31
+hacienda pública,30
+autovía,30
+política cultural,29
+reducción de las emisiones de gas,29
+cooperación jurídica,28
+investigación científica,28
+terrorismo,28
+Galicia,28
+aeropuerto,28
+política de transportes,28
+renovación urbana,28
+investigación y desarrollo,28
+País Vasco,27
+política de investigación,27
+política agrícola,27
+ponencia parlamentaria,27
+curso de agua,27
+exclusión social,27
+gestión del agua,27
+recluso,26
+Consejo Europeo,26
+Andalucía,25
+policía,25
+ejército,25
+litoral,25
+industria agroalimentaria,25
+consumo,25
+política energética,24
+migración ilegal,24
+política de telecomunicación,24
+joven,24
+política industrial,24
+Cámara Alta,24
+política de financiación,23
+política regional,23
+administración pública,23
+industria del automóvil,23
+La Rioja,23
+innovación,23
+Islas Baleares,22
+seguridad social,21
+política comercial,21
+política internacional,21
+Zaragoza (Provincia),21
+infracción,21
+política de defensa,21
+Acción Común,20
+hacienda regional,20
+protección del litoral,20
+desarrollo sostenible,20
+televisión de alta definición,20
+tráfico rodado,19
+Tarragona (Provincia),19
+asistencia a las personas de edad avanzada,19
+Castilla y León,19
+transporte ferroviario,19
+política pesquera,19
+organización administrativa,18
+lucha contra el paro,18
+previsión presupuestaria,18
+patrimonio cultural,18
+efecto invernadero,18
+formación profesional,18
+red de carreteras,18
+Zamora (Provincia),18
+funcionario,18
+pobreza,18
+muerte,18
+reunión en la Cumbre,18
+Internet,18
+dependencia de los ancianos,18
+cooperación institucional,18
+recursos presupuestarios,17
+museo,17
+política migratoria,17
+jurisdicción judicial,17
+seguridad en carretera,17
+subida de precios,17
+edificio público,16
+empresa,16
+creación de empleo,16
+tecnología digital,16
+Aragón,16
+Albacete (Provincia),16
+autonomía,16
+reconocimiento de títulos,16
+Comunidad Valenciana,16
+política alimentaria,16
+Salamanca (Provincia),16
+integración social,16
+hacienda local,16
+política de la juventud,16
+estación ferroviaria,15
+asignación de recursos,15
+organización no gubernamental,15
+recaudación de impuestos,15
+autonomía de los discapacitados,15
+crecimiento económico,15
+Ourense (Provincia),15
+conmemoración,15
+enfermedad infecciosa,15
+Barcelona (Provincia),15
+servicio público,14
+Región de Murcia,14
+deporte,14
+Directiva CE,14
+informe,14
+Granada (Provincia),14
+Navarra,14
+Málaga (Provincia),14
+administración penitenciaria,14
+programa de enseñanza,14
+servicio sanitario,14
+urbanismo,14
+industria audiovisual,14
+asignación por estudios,14
+españoles,13
+centro de enseñanza,13
+gasto público,13
+circulación aérea,13
+centro de investigación,13
+víctima,13
+ayuda a la agricultura,13
+política interior,13
+envejecimiento de la población,13
+suministro de energía eléctrica,13
+servicio postal,13
+Madrid (Provincia),13
+Comunidad de Madrid,13
+reparto de competencias,13
+propiedad pública,13
+ahorro de energía,13
+Huesca (Provincia),13
+parado,13
+industria pesquera,13
+política gubernamental,13
+derecho de custodia,13
+IVA,13
+sindicato,12
+Madrid (Madrid),12
+estadística,12
+integración europea,12
+ordenación hidroagrícola,12
+difusión de la cultura,12
+publicidad,12
+igualdad de trato,12
+supresión de empleo,12
+deporte profesional,12
+campaña de sensibilización,12
+equipamiento social,12
+tratamiento del agua,12
+Comisión CE,12
+empresa privada,12
+patrimonio arquitectónico,12
+cultivo de regadío,12
+precio de la energía,12
+Castellón/Castelló (Provincia),12
+sistema sanitario,12
+construcción urbana,11
+aplicación de la ley,11
+Soria (Provincia),11
+transposición de la legislación comunitaria,11
+comercio exterior,11
+deducción fiscal,11
+política de armamento,11
+asociación,11
+prestación social,11
+Marruecos,11
+licitación,11
+Teruel (Provincia),11
+relación legislativo-ejecutivo,11
+enseñanza superior,11
+familia,11
+transporte de cercanías,11
+Cantabria,10
+tráfico de estupefacientes,10
+Hierro (El) (Isla de) (Santa Cruz de Tenerife),10
+ayuda a las empresas,10
+Coruña (A) (Provincia),10
+transmisión de la propiedad,10
+ejecución de sentencia,10
+Zaragoza (Zaragoza),10
+obra de fábrica,10
+impuesto sobre la renta de las personas físicas,10
+derechos humanos,10
+economía,10
+traspaso de competencias,10
+Segovia (Provincia),10
+impacto ambiental,10
+enseñanza secundaria,10
+mercado laboral,10
+turismo,10
+Venezuela,10
+informe de actividad,10
+Principado de Asturias,10
+apoyo económico,10
+discapacitado,10
+Burgos (Provincia),10
+epidemia,10
+cotización social,10
+Valladolid (Provincia),9
+instalación portuaria,9
+comercio al por menor,9
+descentralización,9
+agricultor,9
+enfermedad animal,9
+personal,9
+política de comunicación,9
+ciencia,9
+política de desarrollo,9
+personal docente,9
+comercialización,9
+Ibiza (Isla de) (Illes Balears),9
+energía renovable,9
+planificación de transportes,9
+deuda pública,9
+Murcia (Provincia),9
+seguridad y vigilancia,9
+ONU,9
+médico,9
+niño,9
+central nuclear,9
+Ávila (Provincia),9
+región rural,9
+contratación de personal,9
+seguridad nuclear,8
+porcino,8
+gas con efecto invernadero,8
+Lleida (Provincia),8
+degradación del medio ambiente,8
+impuesto sobre sociedades,8
+reunión internacional,8
+homicidio,8
+energía eléctrica,8
+proyecto de investigación,8
+análisis económico,8
+entidad de crédito,8
+Girona (Provincia),8
+índice de precios,8
+sector terciario,8
+delincuencia,8
+control sanitario,8
+Cuba,8
+Almería (Provincia),8
+estadística del empleo,8
+Estados Unidos,8
+telecomunicación,8
+Extremadura,7
+corrupción,7
+producto alimenticio,7
+banco central,7
+consenso político,7
+enfermedad,7
+servicio de vías públicas,7
+gastos electorales,7
+espectáculos,7
+producto agrícola,7
+Navarra (Provincia),7
+Valencia/València (Provincia),7
+industria de la construcción,7
+inclemencia atmosférica,7
+política agrícola común,7
+desarrollo rural,7
+lengua oficial,7
+Cantabria (Provincia),7
+línea aérea,7
+jurisdicción superior,7
+política de información,7
+guerra civil,7
+Lanzarote (Isla de) (Las Palmas),7
+autopista,7
+salud pública,7
+prevención de riesgos,7
+comunidad autónoma,7
+Ceuta,7
+Palma (Illes Balears),7
+saneamiento,7
+Castilla-La Mancha,7
+protección de la infancia,7
+agua estancada,7
+contrato administrativo,7
+Cuenca (Provincia),7
+peaje,7
+transporte aéreo,7
+presupuesto,7
+Guadalajara (Provincia),7
+tecnología,6
+política familiar,6
+Registro Civil,6
+Kosovo,6
+Sevilla (Provincia),6
+teléfono,6
+retraso escolar,6
+Tenerife (Isla de) (Santa Cruz de Tenerife),6
+Gobierno,6
+competitividad,6
+especialidad médica,6
+Palencia (Provincia),6
+administración fiscal,6
+alumno,6
+base militar,6
+elecciones regionales,6
+mercado único,6
+fiscalidad,6
+Alicante/Alacant (Provincia),6
+vino,6
+estuario,6
+ayuda a las víctimas,6
+Salamanca (Salamanca),6
+Toledo (Provincia),6
+León (Provincia),6
+Nájera (La Rioja),6
+accidente de transporte,6
+seguro de desempleo,6
+impuesto,6
+inflación,6
+Santiago de Compostela (A Coruña),6
+consumidor,6
+presupuesto regional,6
+establecimiento hospitalario,6
+procedimiento judicial,6
+Cádiz (Provincia),6
+jefe del Gobierno,6
+modelo económico,6
+educación preescolar,6
+Tratado de la Unión Europea,6
+manifestación cultural,6
+comercio interior,6
+reforma de la PAC,6
+ganado,6
+comisión de estudio,6
+modo de financiación,6
+Badajoz (Provincia),6
+energía nuclear,6
+Portugal,6
+sistema de enseñanza,6
+elecciones generales,6
+África,6
+comisión especial,6
+personal militar,6
+política presupuestaria,6
+reglamento parlamentario,6
+Ciudad Real (Provincia),6
+Rioja (La) (Provincia),6
+profesión independiente,6
+Melilla,6
+Asturias (Provincia),6
+situación de la agricultura,6
+hipoteca,6
+detención,6
+Jaén (Provincia),6
+arrendamiento inmobiliario,6
+baja de precios,6
+Menorca (Isla de) (Illes Balears),6
+tecnología de la información,6
+desarrollo industrial,5
+carburante,5
+fuerzas en el exterior,5
+mortalidad,5
+legumbre,5
+sitio Internet,5
+democracia,5
+Gran Canaria (Isla de) (Las Palmas),5
+Córdoba (Provincia),5
+reforma fiscal,5
+Conferencia internacional,5
+Pontevedra (Provincia),5
+convención ONU,5
+tercera edad,5
+cuidado de la salud,5
+petición,5
+Estado miembro UE,5
+asociación de municipios,5
+región periférica,5
+endeudamiento,5
+petróleo,5
+Guipúzcoa (Provincia),5
+música,5
+moción parlamentaria,5
+nueva tecnología,5
+organización del trabajo,5
+ordenación del horario de trabajo,5
+Palma (La) (Isla de) (Santa Cruz de Tenerife),5
+situación económica,5
+personal sanitario,5
+inmigración,5
+municipio,5
+gasóleo,5
+organización común de mercado,5
+Parlamento Europeo,5
+contribuyente,5
+investigación,5
+pequeña y mediana empresa,5
+Parlamento nacional,5
+compensación financiera,5
+vivienda social,5
+control de las migraciones,5
+servicio nacional de sanidad,5
+crédito inmobiliario,5
+Mallorca (Isla de) (Illes Balears),5
+seguridad marítima,5
+archivo,5
+Constitución,5
+reglamentación urbanística,5
+procedimiento parlamentario,5
+ayuda a los discapacitados,5
+industria cinematográfica,5
+proposición de ley,5
+poder judicial,5
+inserción profesional,5
+fruto,5
+industria hotelera,5
+organización deportiva,5
+seguridad aérea,5
+vehículo de dos ruedas,5
+acuerdo internacional,5
+terapéutica,5
+sociedad civil,5
+ayuda social,5
+abandono escolar,5
+planificación educativa,5
+producción audiovisual,5
+deuda,5
+Formentera (Isla de) (Illes Balears),5
+mano de obra,5
+suministro de agua,5
+Estado regional,5
+política comunitaria,5
+Cáceres (Provincia),5
+declaración pública,5
+organización patronal,5
+remuneración del trabajo,5
+Reglamento CE,4
+impuesto sobre el patrimonio,4
+farmacovigilancia,4
+Almansa (Albacete),4
+iglesia,4
+venta,4
+sociedad mercantil,4
+Toro (Zamora),4
+plan de urbanismo,4
+concurso administrativo,4
+barco pesquero,4
+instalación deportiva,4
+uso de las lenguas,4
+indemnización,4
+crimen contra la humanidad,4
+sociedad sin fines de lucro,4
+contaminación del agua,4
+industria aeronáutica,4
+elecciones,4
+función pública,4
+Decisión CE,4
+vacunación,4
+juegos olímpicos,4
+gestión empresarial,4
+déficit presupuestario,4
+interés,4
+Barcelona (Barcelona),4
+PESC,4
+tráfico de personas,4
+crédito,4
+política de precios,4
+servicio social,4
+título de estudios,4
+enseñanza obligatoria,4
+ayuda comunitaria,4
+transporte marítimo,4
+gestión del espacio,4
+sector secundario,4
+vehículo de motor,4
+enseñanza primaria,4
+reforma de la enseñanza,4
+industria láctea,4
+nutrición,4
+contabilidad pública,4
+ayuda a la modernización,4
+jurisdicción penal,4
+robo,4
+documento,4
+precio reducido,4
+Ascó (Tarragona),4
+Vizcaya (Provincia),4
+ingeniero,4
+ministerio fiscal,4
+transporte por carretera,4
+contrato de trabajo,4
+Alianza de civilizaciones,4
+Francia,4
+Sant Cugat del Vallès (Barcelona),4
+bovino,4
+sede de la institución,4
+vigilancia marítima,4
+túnel,4
+déficit,4
+confiscación de bienes,4
+educación cívica,4
+industria agraria,4
+lucha contra incendios,4
+Huelva (Provincia),4
+actividad económica,4
+terreno edificable,4
+Ruanda,4
+programa de estabilidad,4
+república,4
+alumnado,4
+derecho de manifestación,4
+incendio,4
+trabajador migrante,4
+seguridad alimentaria,4
+Segovia (Segovia),4
+voluntario internacional,4
+Hellín (Albacete),4
+Álava (Provincia),4
+examen,4
+investigación médica,4
+partido político,4
+ministro,4
+calidad de la enseñanza,4
+cambio tecnológico,4
+protección civil,4
+medicamento,4
+sustituto,4
+multa,4
+aguas territoriales,4
+documento de identidad,4
+extranjero,4
+espacio judicial europeo,4
+elecciones presidenciales,4
+tripulación,4
+Valencia (Valencia/València),4
+producto lácteo,4
+criminalidad,3
+biotecnología,3
+centro de documentación,3
+registro de datos,3
+Sevilla (Sevilla),3
+Oviedo (Asturias),3
+declaración fiscal,3
+ecosistema,3
+astronomía,3
+Baza (Granada),3
+digitalización,3
+vehículo sobre raíles,3
+industria azucarera,3
+biodiversidad,3
+espectáculo deportivo,3
+parque nacional,3
+biblioteca,3
+fruto tropical,3
+control policial,3
+lengua catalana,3
+expropiación,3
+persona jubilada,3
+libertad de expresión,3
+precio al consumidor,3
+procreación artificial,3
+liquidez,3
+reforma institucional,3
+vacaciones,3
+procedimiento legislativo,3
+movilidad sostenible,3
+minoría de edad civil,3
+profesión diplomática,3
+libre circulación de personas,3
+contaminación,3
+gitano,3
+calidad del medio ambiente,3
+parque tecnológico,3
+fijación de precios,3
+política comercial común,3
+cooperante,3
+evaluación de proyectos,3
+propiedad intelectual,3
+precio agrario,3
+sanción administrativa,3
+política de ayudas,3
+construcción naval,3
+independencia nacional,3
+ratificación de un acuerdo,3
+reforma agraria,3
+enfermedad del sistema nervioso,3
+derechos de autor,3
+lista electoral,3
+inversión,3
+incompatibilidad,3
+referéndum,3
+enseñanza médica,3
+Ourense (Ourense),3
+Burgos (Burgos),3
+clausura de central energética,3
+situación política,3
+prisionero político,3
+denominación de origen,3
+Derecho de extranjería,3
+comercio electrónico,3
+baja por maternidad,3
+restricción de la competencia,3
+edificio industrial,3
+fondo de compensación interterritorial,3
+cualificación profesional,3
+intercambio de información,3
+precios,3
+arqueología,3
+propiedad de bienes,3
+inundación,3
+horario de trabajo,3
+viaje,3
+prestación de servicios,3
+Cáritas,3
+préstamo,3
+fraude fiscal,3
+material de alumbrado,3
+monasterio,3
+Colombia,3
+diálogo social,3
+trato cruel y degradante,3
+derecho de voto,3
+política audiovisual,3
+protección del paisaje,3
+célula madre,3
+ayuda al empleo,3
+viticultura,3
+adquisición de la propiedad,3
+suplicatorio,3
+iniciativa legislativa,3
+propiedad inmobiliaria,3
+salud reproductiva,3
+lengua española,3
+acuerdo bilateral,3
+industria farmacéutica,3
+control aéreo,3
+personal de investigación,3
+ocio,3
+sociología,3
+estupefaciente,3
+ministerio,3
+industria gastronómica,3
+Sáhara Occidental,3
+lucha contra la contaminación,3
+control fiscal,3
+producto cárnico,3
+apicultura,3
+exportación,3
+plan de desarrollo,3
+pluralismo de los medios de comunicación,3
+transparencia administrativa,3
+producto interior bruto,3
+Viveiro (Lugo),3
+equipamiento sociocultural,3
+Irlanda,3
+arroz,3
+elecciones europeas,3
+emancipación,3
+control de aduana,3
+infraestructura turística,3
+bosque mediterráneo,3
+calidad del producto,3
+aceite de oliva,3
+piratería,3
+medicina general,3
+entorno laboral,3
+comercio,3
+energía solar,3
+paro juvenil,3
+Asociación Euromediterránea,3
+Bolivia,3
+enseñanza pública,3
+industria química,3
+modificación presupuestaria,3
+desastre natural,3
+software,3
+colegio profesional,3
+Turquía,3
+riesgo sanitario,3
+modernización de la explotación agraria,3
+aviación militar,3
+institución financiera,3
+Defensor del Pueblo,3
+China,3
+medio marino,3
+migración de retorno,3
+clonación,3
+reserva natural,3
+ejército de tierra,3
+financiación,3
+ciudadano,3
+instrucción militar,3
+Mar Mediterráneo,3
+profesión artística,3
+período de sesiones,3
+parque móvil,3
+pertenencia a la Unión Europea,3
+asistencia judicial,3
+producción agrícola,3
+huelga,3
+investigación energética,3
+dictadura,3
+energía hidroeléctrica,3
+traslado de presos,3
+enfermedad del sistema digestivo,3
+partido socialista,3
+sanción penal,3
+red de transmisión de datos,3
+Tratado CE,3
+propiedad del suelo,3
+hábitat rural,3
+sentencia,3
+seguridad en el empleo,3
+integración de los migrantes,3
+usuario de transportes,3
+almacenamiento de alimentos,2
+disolución del Parlamento,2
+control parlamentario,2
+candidato,2
+formación del profesorado,2
+información,2
+armamento,2
+pensión de jubilación,2
+manifestación comercial,2
+transporte público,2
+Cruz Roja,2
+Legutiano (Álava),2
+previsión económica,2
+investigación universitaria,2
+recurso de inconstitucionalidad,2
+geología,2
+Derecho electoral,2
+gasto,2
+papeleta de votación,2
+cargo público,2
+auditoría,2
+prestación a los supervivientes,2
+estrategia económica,2
+política comunitaria de investigación,2
+suministro de documentos,2
+devolución fiscal,2
+tráfico ilícito,2
+seguro privado,2
+Haití,2
+licencia parental para los hombres,2
+título de transporte,2
+inspección veterinaria,2
+Azpeitia (Guipúzcoa),2
+gasto presupuestario,2
+distribución comercial,2
+empresa de transporte,2
+transporte terrestre,2
+industria energética,2
+disidente,2
+abono,2
+estatuto jurídico,2
+salario,2
+Unicef,2
+dimensión de la empresa,2
+procedimiento penal,2
+promoción comercial,2
+Rusia,2
+prevención antisísmica,2
+personal contratado,2
+contaminación atmosférica,2
+compañía de seguros,2
+presupuesto extraordinario,2
+escasez de alimentos,2
+organigrama,2
+bien cultural,2
+industria textil,2
+pena sustitutoria,2
+almacenamiento de residuos,2
+fundación,2
+sida,2
+escolarización,2
+región insular,2
+mejora del hábitat,2
+trabajo no remunerado,2
+control de la comunicación,2
+servicio,2
+Comisión parlamentaria,2
+equipo informático,2
+Topas (Salamanca),2
+enfermedad cardiovascular,2
+personal de servicios,2
+crisis monetaria,2
+violencia juvenil,2
+derecho a la justicia,2
+formalidad administrativa,2
+póliza de seguro,2
+Ejido (El) (Almería),2
+Derecho del trabajo,2
+terreno industrial,2
+aparcamiento,2
+jubilación anticipada,2
+historia de España,2
+seguridad en el trabajo,2
+desarrollo económico,2
+instalación hidroeléctrica,2
+relación bilateral,2
+administración electrónica,2
+etiquetado,2
+lengua gallega,2
+Donostia-San Sebastián (Guipúzcoa),2
+Cáceres (Cáceres),2
+producción,2
+cuestión de Palestina,2
+expulsión,2
+La Rioja (Provincias),2
+principio de subsidiariedad,2
+trabajo de jóvenes,2
+Soria (Soria),2
+organización de la enseñanza,2
+desempleo de los trabajadores migrantes,2
+aborto,2
+transporte regional,2
+energía blanda,2
+flota pesquera,2
+libre prestación de servicios,2
+medicamento de venta libre,2
+derecho a la integridad física,2
+divulgación científica,2
+oficina de información,2
+elecciones nacionales,2
+quiebra,2
+refugiado político,2
+relación diplomática,2
+sostenimiento de los precios agrarios,2
+Consejo de Europa,2
+plan de financiación,2
+formulario,2
+informática,2
+pago,2
+control financiero,2
+distribución de la financiación comunitaria,2
+contingente arancelario,2
+garantía de inversiones,2
+nombramiento de personal,2
+derechos políticos,2
+profesión de la comunicación,2
+programa comunitario,2
+prima salarial,2
+mercado,2
+opinión pública,2
+accidente nuclear,2
+embrión y feto,2
+mantenimiento del empleo,2
+policía autonómica,2
+facturación,2
+institución comunitaria,2
+calendario escolar,2
+gestión de residuos,2
+catálogo,2
+producción industrial,2
+himno,2
+Comisión ONU,2
+cooperación científica,2
+Albolote (Granada),2
+vulcanología,2
+empresa de servicios,2
+televisión europea,2
+material médico-quirúrgico,2
+incapacidad laboral,2
+tutela,2
+Flix (Tarragona),2
+ayuda económica,2
+residuo radiactivo,2
+precio libre,2
+microcrédito,2
+reparto del mercado,2
+ampliación de la Unión Europea,2
+secretario de Estado,2
+automóvil,2
+recurso alimentario,2
+renta familiar,2
+algodón,2
+empresa de inserción,2
+Decisión marco,2
+ejército del aire,2
+Derecho social,2
+libre circulación de programas,2
+pasaporte,2
+lengua regional,2
+país tercero,2
+zona urbana,2
+víctima de guerra,2
+nacionalidad,2
+Suiza,2
+profesión paramédica,2
+JAI,2
+presupuesto local,2
+seguridad internacional,2
+presidente,2
+Conferencia de Ministros,2
+informatización,2
+ecosistema marino,2
+Hoyo de Manzanares (Madrid),2
+servicio gratuito,2
+visita oficial,2
+ovino,2
+condición de trabajo,2
+real academia,2
+reconversión industrial,2
+ejecución de la pena,2
+Israel,2
+Béjar (Salamanca),2
+Derecho comunitario,2
+compra,2
+residencia,2
+familia numerosa,2
+homenaje,2
+industria de la confección,2
+investigación aplicada,2
+Ciudad Rodrigo (Salamanca),2
+arte contemporáneo,2
+derechos del enfermo,2
+planificación familiar,2
+magistrado,2
+Código penal,2
+ayuda a la industria,2
+Melilla (Melilla),2
+Sistema de Información Schengen,2
+viñedo,2
+oferta de empleo,2
+entidad local,2
+migración,2
+comedor escolar,2
+política financiera,2
+pesticida,2
+gestión,2
+disco,2
+cuadro administrativo,2
+ingreso,2
+regulación de la pesca,2
+inversión en el extranjero,2
+infraestructura urbana,2
+Europa,2
+producto químico,2
+pluralismo cultural,2
+impuesto especial,2
+Diputación Permanente,2
+historia,2
+deuda exterior,2
+Albocàsser (Castellón/Castelló),2
+Ceuta (Ceuta),2
+América,2
+ordenación forestal,2
+hambre,2
+Grupo parlamentario,2
+materia plástica,2
+trasplante de órganos,2
+ayuda multilateral,2
+especie protegida,2
+almacenamiento de hidrocarburos,2
+dopaje,2
+recuperación económica,2
+cese de personal,2
+régimen penitenciario,2
+espacio marítimo,2
+convenio colectivo,2
+Tarragona (Tarragona),2
+situación financiera,2
+Granada (Granada),2
+irrigación,2
+gasoducto,2
+resultado de explotación,2
+industria del juguete,2
+equilibrio presupuestario,2
+renta baja,2
+espectáculo de animales,2
+industria de telecomunicaciones,2
+reestructuración industrial,2
+OTAN,2
+cinematografía,2
+Paterna (Valencia/València),2
+multilingüismo,2
+política de importación,2
+sustancia psicotrópica,2
+bienestar de los animales,2
+empresario,2
+azúcar,2
+Maresme,2
+leche,2
+comisión permanente,2
+banco,2
+ingeniería genética,2
+biometría,2
+lucha contra la delincuencia,2
+Derecho constitucional,2
+Consejo de la Unión Europea,2
+investigación sobre el medio ambiente,2
+elecciones locales,2
+mutualidad social,2
+intercambio científico,2
+cooperación judicial UE,2
+personal de la administración de justicia,2
+seguridad de los edificios,2
+ciencia política,2
+envasado,2
+infraestructura industrial,2
+biología,2
+acceso a la información,2
+Gomera (La) (Isla de) (Santa Cruz de Tenerife),2
+formación en el puesto de trabajo,2
+constitución de un partido,2
+deslocalización,2
+contaminación marina,2
+Italia,2
+gastos de escolaridad,2
+educación,2
+señalización,2
+juez,2
+volumen de ventas,2
+Coruña (A) (A Coruña),2
+alcoholismo,2
+relación internacional,2
+personal penitenciario,2
+edificio,2
+poder de nombramiento,2
+medio de transporte,2
+enfermedad de nutrición,2
+mercado interior,2
+comercio de armas,2
+bienestar social,2
+internauta,2
+contrato,2
+Ecuador,2
+representación diplomática,2
+cese de actividad,2
+Figueruelas (Zaragoza),2
+corcho,2
+notario,2
+turismo extranjero,2
+Bilbao (Vizcaya),2
+Guinea Ecuatorial,2
+caja de ahorros,2
+aguas internacionales,2
+Afganistán,2
+adjudicación de contrato administrativo,2
+industria cárnica,2
+clima,1
+legislación,1
+especie marina,1
+industria de la madera,1
+sociedad de inversión,1
+sociedad anónima,1
+Palmas de Gran Canaria (Las) (Las Palmas),1
+Premià de Mar (Barcelona),1
+reconocimiento de las cualificaciones profesionales,1
+Cuenca (Cuenca),1
+poder adquisitivo,1
+equipamiento industrial,1
+fabricación industrial,1
+asilo político,1
+cohesión económica y social,1
+nacionalización,1
+arte religioso,1
+huelga de hambre,1
+empresa inmobiliaria,1
+acta de congreso,1
+política de exportación,1
+dispositivo de señalización,1
+negociación internacional,1
+Grecia,1
+poder consultivo,1
+terceros países mediterráneos,1
+reactivación económica,1
+norma de seguridad,1
+región desfavorecida,1
+renta del agricultor,1
+renuncia a la candidatura,1
+administración de la institución,1
+regulación de la caza,1
+financiación comunitaria,1
+toma de decisiones,1
+tecnología nuclear,1
+Jaraíz de la Vera (Cáceres),1
+acceso a la información comunitaria,1
+vino de calidad superior,1
+horticultura,1
+cierre de cuentas,1
+control de las ayudas públicas,1
+aparato de reproducción del sonido,1
+estructura de la empresa,1
+Praga,1
+cuota de pesca,1
+fruto de cáscara,1
+Adra (Almería),1
+sector primario,1
+servicio de interés general,1
+zona económica exclusiva,1
+programa de gobierno,1
+productividad,1
+jurisdicción fiscal,1
+capital de riesgo,1
+empleado de servicios públicos,1
+iniciativa comunitaria,1
+lengua extranjera,1
+derecho de residencia,1
+matrimonio,1
+ley,1
+norma europea,1
+seguridad del transporte,1
+humanismo,1
+política estructural,1
+Suecia,1
+urbanización,1
+propiedad privada,1
+transferencia,1
+San Sadurniño (A Coruña),1
+Mauritania,1
+organización cultural,1
+industria del mueble,1
+medicina de urgencia,1
+marca,1
+comercio de arte,1
+pesca de bajura,1
+carne de conejo,1
+industria electrónica,1
+OEA,1
+inversión regional,1
+consumo de energía,1
+país menos desarrollado,1
+contaminación de los alimentos,1
+protección de la vida privada,1
+documento electrónico,1
+Mesa de la comisión,1
+política comunitaria de empleo,1
+política de producción,1
+Jaén (Jaén),1
+industria del libro,1
+impuesto sobre actividades profesionales,1
+cementerio,1
+fondo marino,1
+Osuna (Sevilla),1
+diagnóstico médico,1
+comercio internacional,1
+reglamento comunitario,1
+Carboneras (Almería),1
+cultura popular,1
+agencia regional,1
+legumbre de raíz,1
+gastos de sanidad,1
+blanqueo de dinero,1
+trabajador social,1
+sanción económica,1
+hombre,1
+globalización,1
+medicina,1
+control fronterizo,1
+bebida alcohólica,1
+pesca de altura,1
+adhesión a un acuerdo,1
+energía eólica,1
+material de construcción,1
+política nuclear,1
+violencia,1
+vigilancia del medio ambiente,1
+trabajador minusválido,1
+Gibraltar,1
+símbolo europeo,1
+planta transgénica,1
+organización benéfica,1
+Alemania,1
+Córdoba (Córdoba),1
+agua residual,1
+Chad,1
+Guardo (Palencia),1
+capacidad de transporte,1
+industria informática,1
+forense,1
+trabajo clandestino,1
+delegación provincial,1
+minería del carbón,1
+tierras y piedras,1
+planificación económica,1
+entrega,1
+política marítima,1
+estructura pesquera,1
+planta eléctrica,1
+contaminación acústica,1
+contenedor,1
+infracción administrativa,1
+Santoña (Cantabria),1
+participación política,1
+seguro de transportes,1
+coste de la sanidad,1
+indemnización por despido,1
+PNUMA,1
+Consejo de Ministros,1
+lucha contra el crimen,1
+producto farmacéutico,1
+empresa familiar,1
+ética,1
+Perú,1
+condición de la mujer,1
+capital especulativo,1
+contracepción,1
+prevención de la contaminación,1
+Barrios de Colina (Burgos),1
+palacio,1
+resultado electoral,1
+comparecencia parlamentaria,1
+República Dominicana,1
+concejal,1
+entidad territorial,1
+protección de la fauna,1
+error judicial,1
+censo de población,1
+renta de la explotación agraria,1
+COSAC,1
+instauración de la paz,1
+ayuda a los necesitados,1
+firma electrónica,1
+patrocinio,1
+política migratoria comunitaria,1
+oleicultura,1
+cooperación en materia de educación,1
+transporte de mercancías peligrosas,1
+realidad virtual,1
+comisión interministerial,1
+enseñanza a distancia,1
+crustáceo,1
+informe de investigación,1
+fusión de empresas,1
+economía doméstica,1
+empréstito público,1
+jurisdicción civil,1
+libre competencia,1
+acuicultura,1
+tratamiento fitosanitario,1
+Acuerdo de asociación CE,1
+reembolso,1
+frontera,1
+comportamiento político,1
+medios para discapacitados,1
+profesión jurídica,1
+prima de seguro,1
+diferencia cultural,1
+moneda europea,1
+desarme,1
+derecho de participación,1
+proveedor de acceso,1
+Estado de Derecho,1
+identidad cultural,1
+protección de la familia,1
+Ciutadella de Menorca (Illes Balears),1
+estudio comparativo,1
+industrialización,1
+avicultura,1
+zona peatonal,1
+seguro obligatorio,1
+Sant Jaume d'Enveja (Tarragona),1
+garantía,1
+personal de tierra,1
+veterinario,1
+Derecho internacional privado,1
+registrador de la propiedad,1
+Gernika-Lumo (Vizcaya),1
+racismo,1
+aculturación,1
+Carta de los Derechos Fundamentales de la Unión Europea,1
+enmienda,1
+industria alimentaria,1
+civilización árabe,1
+Cerdanyola del Vallès (Barcelona),1
+intervención militar,1
+vaca lechera,1
+permiso de trabajo,1
+protección del suelo,1
+ocupación militar,1
+movilidad de residencia,1
+Derecho laboral internacional,1
+impunidad,1
+utilización de las tierras,1
+población activa,1
+producción alimenticia,1
+ayuda a la reestructuración,1
+turismo rural,1
+macroeconomía,1
+Filipinas,1
+voto por delegación,1
+ayuda a la producción,1
+mercado comunitario,1
+cooperación interempresarial,1
+meteorología,1
+movilidad profesional,1
+recurso marino,1
+Huesca (Huesca),1
+Aragón (Provincias),1
+industria de armamentos,1
+industria exportadora,1
+debate parlamentario,1
+psicología,1
+acoso sexual,1
+industria de programas,1
+neurología,1
+moneda,1
+Martorell (Barcelona),1
+cálculo de costes,1
+derecho de asilo,1
+Mesa del Parlamento,1
+mantenimiento,1
+explotación lechera,1
+independencia de la justicia,1
+beneficiario de ayuda,1
+movimiento pro derechos humanos,1
+cultura,1
+contaminación por vehículos automotores,1
+zona de recreo,1
+desnuclearización,1
+Polonia,1
+imagen fotográfica,1
+combustible,1
+abstencionismo,1
+Lladó (Girona),1
+organismo genéticamente modificado,1
+América Central,1
+producto nacional,1
+superficie agrícola utilizada,1
+Camino de Santiago,1
+instrumento internacional,1
+aprobación de la ley,1
+Reino Unido,1
+transferencia de la empresa,1
+Benavente (Zamora),1
+minoría sexual,1
+oceanografía,1
+política de apoyo,1
+norma de calidad,1
+pesca tradicional,1
+movimiento ecologista,1
+capital (ciudad),1
+orientación profesional,1
+reducción de salarios,1
+Inca (Illes Balears),1
+Almonte (Huelva),1
+combustible sustitutivo,1
+matrimonio mixto,1
+sacrificio de animales,1
+promoción profesional,1
+condición de vida,1
+protección diplomática,1
+Castellón de la Plana/Castelló de la Plana (Castellón/Castelló),1
+Alcorcón (Madrid),1
+Mondoñedo (Lugo),1
+secuestro de personas,1
+mercado de interés nacional,1
+residuo industrial,1
+Algeciras (Cádiz),1
+cofinanciación,1
+Vigo (Pontevedra),1
+Posición Común,1
+procedimiento disciplinario,1
+Derecho internacional,1
+bioética,1
+lugar de pesca,1
+reducción de la deuda,1
+transporte de animales,1
+método pedagógico,1
+protección de las libertades,1
+cooperación financiera,1
+ayuda humanitaria,1
+Carta de Derechos Humanos,1
+pérdida de la cosecha,1
+investigación en la empresa,1
+profesión de la informática,1
+Úbeda (Jaén),1
+escisión de empresas,1
+lectura,1
+tarifa ferroviaria,1
+reciclaje de residuos,1
+condiciones atmosféricas,1
+fraude electoral,1
+pena de muerte,1
+previsión a corto plazo,1
+Rozas de Madrid (Las) (Madrid),1
+sondeo de opinión,1
+producto de origen animal,1
+comité de empresa,1
+teledetección,1
+Picassent (Valencia/València),1
+control de constitucionalidad,1
+subcontratación externa,1
+zona protegida,1
+presentación de candidatura,1
+jurisdicción internacional,1
+deforestación,1
+medicina natural,1
+balanza deficitaria,1
+malnutrición,1
+Motril (Granada),1
+Copenhague,1
+profesión de la información,1
+reconocimiento de estudios,1
+alcohol,1
+discriminación sexual,1
+industria cultural,1
+fueloil,1
+acoso moral,1
+balanza de pagos,1
+contrato comercial,1
+encuesta de consumo,1
+pescado de mar,1
+México,1
+Alcoy/Alcoi (Alicante/Alacant),1
+congelación salarial,1
+renta,1
+programa de investigación,1
+telecomunicación inalámbrica,1
+análisis sociológico,1
+control fitosanitario,1
+informe de ponencia,1
+legislatura,1
+Palencia (Palencia),1
+energía térmica,1
+Ávila (Ávila),1
+biodegradabilidad,1
+Maó (Illes Balears),1
+buque,1
+Seu d'Urgell (La) (Lleida),1
+medicina preventiva,1
+protección de las aguas,1
+despido,1
+enfermedad mental,1
+Santa Cruz de Tenerife (Provincia),1
+reglamentación de la circulación,1
+cirugía,1
+impuesto sobre la renta,1
+prioridad económica,1
+política de austeridad,1
+consejero autonómico,1
+Ciudad Real (Ciudad Real),1
+grasa alimenticia,1
+Puerto del Rosario (Las Palmas),1
+medicamento genérico,1
+prostitución,1
+norma,1
+Argentina,1
+convención internacional,1
+delito económico,1
+legalidad,1
+Montblanc (Tarragona),1
+Euribor,1
+alga,1
+vehículo,1
+Argelia,1
+cooperación medioambiental,1
+cooperación policial,1
+Murcia (Murcia),1
+libro escolar,1
+Honduras,1
+partido nacionalista,1
+voto por correspondencia,1
+importación,1
+ayuda alimentaria,1
+financiación de la ayuda,1
+economía social,1
+impuesto nacional,1
+delito contra las personas,1
+relación cultural,1
+proyecto de presupuesto,1
+juez no profesional,1
+producto pesquero,1
+consumo industrial,1
+gas raro,1
+política bancaria,1
+jurisdicción mercantil,1
+riesgo natural,1
+Galicia (Provincias),1
+alquiler,1
+industria eléctrica,1
+Brasil,1
+tecnología limpia,1
+decreto,1
+migración profesional,1
+profesión aduanera,1
+ayuda sanitaria,1
+pago intracomunitario,1
+sociedad,1
+obra de arte,1
+precio al productor,1
+ordenación del territorio,1
+inspección de alimentos,1
+reinserción social,1
+campaña electoral,1
+Nicaragua,1
+bien de consumo,1
+Roa (Burgos),1
+seguro público,1
+Tribunal Europeo de Derechos Humanos,1
+competencia,1
+Baiona (Pontevedra),1
+FEOGA,1
+delincuencia juvenil,1
+tabaco,1
+centro de educación vigilada,1
+tolerancia,1
+Océano Índico,1
+producción cinematográfica,1
+Fene (A Coruña),1
+Bélgica,1
+teléfono móvil,1
+sociólogo,1
+islamismo,1
+partícula elemental,1
+conferencia sectorial,1
+ayuda a la recolocación,1
+desarrollo social,1
+inmunidad diplomática,1
+evaluación de conocimientos,1
+arquitectura,1
+acción judicial,1
+OAA,1
+Ejecutivo,1
+sector económico,1
+soporte de grabación,1
+competencia jurisdiccional,1
+centro comercial,1
+financiación de la empresa,1
+insecticida,1
+reforestación,1
+Caribe,1
+discapacitado físico,1
+categoría profesional,1
+competencias del Parlamento,1
+impuesto sobre transmisiones patrimoniales,1
+embarcación de recreo,1
+arma antipersonas,1
+ahorro,1
+lengua inglesa,1
+pediatría,1
+agua potable,1
+comunicación de datos,1
+Gambia,1
+enfermedad congénita,1
+sede social,1
+discapacitado psíquico,1
+migración familiar,1
+Alcalá de Henares (Madrid),1
+Daimiel (Ciudad Real),1
+teletexto,1
+desigualdad social,1
+solvencia,1
+psiquiatría,1
+emplazamiento de central energética,1
+ordenador,1
+derogación,1
+Pamplona/Iruña (Navarra),1
+democratización,1
+demografía,1
+protección de datos,1
+estructura agraria,1
+OSCE,1
+producto originario,1
+profesión técnica,1
+Alcalá de Guadaíra (Sevilla),1
+acuerdo pesquero,1
+orden conminatoria,1
+publicación,1
+Castilla y León (Provincias),1
+Olmedo (Valladolid),1
+distribución por sexos,1
+Zimbabue,1
+periódico,1
+jurisdicción constitucional,1
+organización de las profesiones,1
+responsabilidad por daños al medio ambiente,1
+publicación científica,1
+huérfano,1
+hidrología,1
+manifestación cultural europea,1
+Talavera de la Reina (Toledo),1
+mercado inmobiliario,1
+catastro,1
+recurso administrativo,1
+prestación por maternidad,1
+Prat de Llobregat (El) (Barcelona),1
+derecho del individuo,1
+Encina (La) (Salamanca),1
+trabajo social,1
+salud mental,1
+Vandellòs i l'Hospitalet de l'Infant (Tarragona),1
+negociación colectiva,1
+Recomendación CEE,1
+Nerja (Málaga),1
+distribución de la ayuda,1
+aumento salarial,1
+contrato de obras,1
+filiación,1
+créditos por cobrar,1
+Cartagena (Murcia),1
+Alcanar (Tarragona),1
+Conferencia ONU,1
+apoyo monetario,1
+participación de la mujer,1
+región mediterránea CE,1
+resolución ONU,1
+prescripción de la pena,1
+convención europea,1
+gestión de conocimientos,1
+alimento para el ganado,1
+ciudad,1
+orden religiosa,1
+seísmo,1
+lengua vasca,1
+política comunitaria-política nacional,1
+ciencias físicas,1
+guerra,1
+fusión internacional,1
+industria nuclear,1
+homologación,1
+Toledo (Toledo),1
+mamífero salvaje,1
+formación de precios,1
+recurso contencioso-administrativo,1
+conflicto laboral,1
+economía del conocimiento,1
+biblioteca pública,1
+deuda aduanera,1
+producto de madera,1
+mercado financiero,1
+ayuda a los siniestrados,1
+biblioteca nacional,1
+distribución del trabajo,1
+caprino,1
+vacuna,1
+Irixo (O) (Ourense),1
+biosfera,1
+Reus (Tarragona),1
+exportación de capitales,1
+transporte de mercancías,1
+Barreiros (Lugo),1
+integrismo religioso,1
+reglamentación comercial,1
+biomasa,1
+método de aprendizaje,1
+difusión de la información,1
+política social europea,1
+balanza comercial,1
+Ceuta y Melilla,1
+abastecimiento energético,1
+África Occidental,1
+aceite de girasol,1
+acceso a la justicia,1
+libertad de información,1
+restricción de las importaciones,1
+rendimiento agrícola,1
+delito fiscal,1
+revisión de la Constitución,1
+Deltebre (Tarragona),1
+transferencia de tecnología,1
+azúcar de remolacha,1
+fusión nuclear,1
+arte ibérico,1
+activo circulante,1
+edición,1
+producto de envasado,1
+empresa extranjera,1
+ave,1
+sanidad laboral,1
+acuerdo comercial,1
+parcela,1
+educación de adultos,1
+transporte transfronterizo,1
+admisión de extranjeros,1
+citología,1
+Corte Penal Internacional,1
+problema social,1
+evasión fiscal,1
+ayuda internacional,1
+juego de azar,1
+rentabilidad,1
+publicidad de los precios,1
+análisis de costes,1
+estatuto del personal,1
+explosivo,1
+Almacelles (Lleida),1
+energía,1
+trabajo femenino,1
+foro,1
+infracción del código de la circulación,1
+Banco Mundial,1
+explotación minera,1
+Irán,1
+Arrecife (Las Palmas),1
+solución de conflictos,1
+educación medioambiental,1
+empleo reservado,1
+circunscripción electoral,1
+Carta europea,1
+procedimiento de codecisión,1
+investigación agronómica,1
+Isla de Francia,1
+coyuntura económica,1
+reforma judicial,1
+Qatar,1
+impuesto sobre los carburantes,1
+discriminación lingüística,1
+capacidad jurídica,1
+colaboración presupuestaria,1
+temporada de pesca,1
+Fuerteventura (Isla de) (Las Palmas),1
+región turística,1
+industria carbonera,1
+estabilización económica,1
+procedimiento civil,1
+violencia sexual,1
+zona húmeda,1
+seguro agrícola,1
+Santa Cruz de la Palma (Santa Cruz de Tenerife),1
+Código civil,1
+comisión de investigación,1
+represión,1
+responsabilidad,1
+derecho de establecimiento,1
+calidad de la vida,1
+Constitución europea,1
+enseñanza general,1
+falsificación,1
+crimen organizado,1
+cartilla sanitaria,1
+delegación parlamentaria,1
+anglicismos,1
+Paraguay,1
+enseñanza de idiomas,1
+régimen político,1
+viajero,1
+Juneda (Lleida),1
+coste salarial,1
+asistencia social,1
+estudiante extranjero,1
+hijo de migrante,1
+gran superficie comercial,1
+región de montaña,1
+contencioso electoral,1
+Asia,1
+arquitectura militar,1
+alcalde,1
+dietas y gastos,1
+armonización fiscal,1
+precio de venta,1
+trabajador joven,1
+Cercano y Medio Oriente,1
+publicación de la ley,1
+distinción honorífica,1
+mecenazgo,1
+Linares (Jaén),1
+aceituna,1
+fondo CE,1
+Interpol,1
+multimedios,1
+cooperación transfronteriza,1
+organización internacional,1
+Andorra,1
+sexualidad,1
+publicidad de cuentas,1
+diligencia judicial,1
+agua de baño,1
+derechos de la mujer,1
+mercado internacional,1
+producción lechera,1
+lucha contra los insectos,1
+agua salada,1
+primera infancia,1
+etnología,1
+emplazamiento industrial,1
+jurisdicción de menores,1
+matriculación del vehículo,1
+creación artística,1
+establecimiento farmacéutico,1
+Priego de Córdoba (Córdoba),1
+estudiante,1
+derechos del niño,1
+alergia,1
+catedral,1
+proyecto de ley,1
+refugiado,1
+ave de corral ponedora,1
+Torreblanca (Castellón/Castelló),1
+caza,1
+Palmas (Las) (Provincia),1
+bandera,1
+agresión física,1
+fundación de la empresa,1
+artículo de menaje,1
+acción penal,1
+reducción de la pena,1
+traducción,1
+cooperativa agrícola,1
+farmacéutico,1
+fraude,1
+estimación de la base imponible,1
+presupuesto social,1
+explotación de recursos,1
+monopolio,1
+seguro de invalidez,1
+artes,1
+presupuesto suplementario,1
+promoción cultural,1
+arbitraje financiero,1
+práctica religiosa,1
+cooperación judicial,1
+legumbre de fruto,1
