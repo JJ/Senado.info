@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('0.0.3');
+use version; our $VERSION = qv('0.0.4');
 
 # Other recommended modules (uncomment to use):
 #  use IO::Prompt;
@@ -36,10 +36,17 @@ sub extrae_nombres_listado {
   my @senadores;
   for my $s ( @lista_con_formato ) {
     my ( $url_ficha, $apellidos, $nombre, $grupo, $nombramiento, $zona ) = ($s =~ m{'([^']+)'\)">([^,]+), ([^)]+)+ \((\w+)\)</a>\s+. (\w+) por (.+)});
+    my $genero;
+    if ( ($s =~ /\bElecto\b/) || ($s =~ /\bDesignado\b/) ) {
+      $genero = 'm';
+    } else {
+      $genero = 'f';
+    }
     push @senadores, { url => $url_ficha,
 		       apellidos => $apellidos,
 		       nombre => $nombre,
 		       grupo => $grupo,
+		       genero => $genero,
 		       nombramiento => lcfirst($nombramiento),
 		       zona => $zona };
   }
