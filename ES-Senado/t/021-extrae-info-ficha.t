@@ -13,10 +13,10 @@ my @fichas = qw(249 278 061 125 200);
 
 for my $f (@fichas ) {
   my $source;
-  if ( -r "../../data/$f"."_index_files/$f.html" ) {
-    $source = "../../data/$f"."_index_files/$f.html";
+  if ( -r "t/$f.html" ) {
+    $source = "t/$f.html";
   } else {
-    $source = "../data/$f"."_index_files/$f.html";
+    $source = "$f.html";
   }
 
   my $ficha = read_file( $source ) || die "No puedo cargar $source por $@\n";

@@ -13,10 +13,10 @@ my @fichas = qw(089);
 
 for my $f (@fichas ) {
   my $source;
-  if ( -r "../../data/interv_$f.html" ) {
-    $source = "../../data/interv_$f.html";
+  if ( -r "t/interv_$f.html" ) {
+    $source = "t/interv_$f.html";
   } else {
-    $source = "../data/interv_$f.html";
+    $source = "interv_$f.html";
   }
 
   my $ficha = read_file( $source ) || die "No puedo cargar $source por $@\n";
