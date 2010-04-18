@@ -20,7 +20,7 @@ $menos_intervenciones = executeQuery("select personas.id,personas.grupo,personas
 
 $solo_una = count(executeQuery("select personas.nombre,personas.apellidos,count(intervencion_actividades.id) as veces from intervencion_actividades,personas where personas.id=intervencion_actividades.persona_id group by personas.id having veces<2;"));
 
-$ultimas = executeQuery("select personas.nombre,personas.apellidos,personas.grupo,personas.zona,intervencion_actividades.fase from personas,intervencion_actividades where personas.id=intervencion_actividades.persona_id order by intervencion_actividades.id desc limit 0,4;");
+$ultimas = executeQuery("select personas.id,personas.nombre,personas.apellidos,personas.grupo,personas.zona,intervencion_actividades.fase from personas,intervencion_actividades where personas.id=intervencion_actividades.persona_id order by intervencion_actividades.id desc limit 0,4;");
 
 ?>
 
@@ -103,6 +103,54 @@ $ultimas = executeQuery("select personas.nombre,personas.apellidos,personas.grup
 				?>
 					
 				</table>
+				
+				<?php
+
+				include_once("db.php");
+
+				$arr = executeQuery("select personas.grupo,count(intervencion_actividades.id) as veces from intervencion_actividades,personas where personas.id=intervencion_actividades.persona_id group by personas.grupo order by veces desc;");
+
+
+				$chart="";
+				foreach ($arr as $item)
+				{
+					$chart.="\n\t\t['".$item['grupo']."', ".$item['veces']."],";
+				}
+				$chart=chop($chart,',');
+
+				?>
+
+				<!--Load the AJAX API-->
+				<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+				<script type="text/javascript">
+				
+				  // Load the Visualization API and the piechart package.
+				  google.load('visualization', '1', {'packages':['piechart']});
+				  
+				  // Set a callback to run when the Google Visualization API is loaded.
+				  google.setOnLoadCallback(drawChart);
+				  
+				  // Callback that creates and populates a data table, 
+				  // instantiates the pie chart, passes in the data and
+				  // draws it.
+				  function drawChart() {
+
+				  // Create our data table.
+					var data = new google.visualization.DataTable();
+					data.addColumn('string', 'Grupo');
+					data.addColumn('number', 'Intervenciones');
+					data.addRows([<?php echo $chart ?>
+					]);
+
+					// Instantiate and draw our chart, passing in some options.
+					var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+					chart.draw(data, {width: 280, height: 200, is3D: true, title: 'Intervenciones en el Senado', titleFontSize: 15});
+				  }
+				</script>
+
+				<!--Div that will hold the pie chart-->
+				<div id="chart_div" style="border: 1px dotted #999;"></div>
+
 			
 			</div>
 			
@@ -126,7 +174,7 @@ $ultimas = executeQuery("select personas.nombre,personas.apellidos,personas.grup
 					
 					<p>Hay <a href="#"><?php echo $solo_una?> senadores</a> que no han intervenido en toda la legislatura. <a href="#">&iquest;Qu&eacute; significa esto?</a></p>
 					
-					<!-- <p>De los senadores que no han intervenido, hay 123 que tampoco han presentado ninguna iniciativa ni ostentan ningÃºn cargo.</p> -->
+					<!-- <p>De los senadores que no han intervenido, hay 123 que tampoco han presentado ninguna iniciativa ni ostentan ningún cargo.</p> -->
 					
 				</div><!-- .cont -->
 			
@@ -147,7 +195,7 @@ $ultimas = executeQuery("select personas.nombre,personas.apellidos,personas.grup
 				<?php
 					foreach ($ultimas as $item)
 					{
-						echo "<tr><td><a href=\"#\">".ucwords(mb_strtolower($item['nombre'],"iso-8859-1"))." ".ucwords(strtolower($item['apellidos']))."</a><br>".ucwords(mb_strtolower($item['zona'],"iso-8859-1"))." &middot; ".$item['grupo']."</td><td>".$item['fase']."</td></tr>\n";
+						echo "<tr><td><a href=\"senador.php?id=".$item['id']."\">".ucwords(mb_strtolower($item['nombre'],"iso-8859-1"))." ".ucwords(strtolower($item['apellidos']))."</a><br>".ucwords(mb_strtolower($item['zona'],"iso-8859-1"))." &middot; ".$item['grupo']."</td><td>".$item['fase']."</td></tr>\n";
 					}
 				?>
 				</table>

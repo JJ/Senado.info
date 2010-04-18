@@ -14,7 +14,7 @@ $intervenciones = $result[0]['intervenciones'];
 $result = executeQuery("select count(titulo) as iniciativas from actividades;");
 $iniciativas = $result[0]['iniciativas'];
 
-$senadores = executeQuery("select nombre, apellidos, id from personas;");
+$senadores = executeQuery("select nombre, apellidos, zona, grupo, id from personas;");
 
 ?>
 
@@ -93,7 +93,7 @@ $senadores = executeQuery("select nombre, apellidos, id from personas;");
 				<?php
 					foreach ($senadores as $item)
 					{
-						echo "<tr><td class=\"num\">".$item['veces']."</td><td><a href=\"senador.php?id=".$item['id']."\">".ucwords(strtolower($item['nombre']))." ".ucwords(strtolower($item['apellidos']))."</a><br>".ucwords(strtolower($item['zona']))." · ".$item['grupo']."</td></tr>\n";
+					  echo "<tr><td class=\"num\">".$item['veces']."</td><td><a href=\"senador.php?id=".$item['id']."\">".ucwords(mb_strtolower($item['nombre'],'iso-8859-1'))." ".ucwords(mb_strtolower($item['apellidos'],'iso-8859-1'))."</a><br>".ucwords(mb_strtolower($item['zona'],'iso-8859-1'))." · ".$item['grupo']."</td></tr>\n";
 					}
 				?>
 					
