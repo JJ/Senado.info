@@ -185,10 +185,28 @@ PERL_ARCHIVE_AFTER =
 
 
 TO_INST_PM = lib/ES/Senado.pm \
+	lib/ES/Senado/Result/Actividades.pm \
+	lib/ES/Senado/Result/Actividades.pmx \
+	lib/ES/Senado/Result/Descriptores_Actividad.pm \
+	lib/ES/Senado/Result/Iniciativas.pmx \
+	lib/ES/Senado/Result/Intervencion_Actividades.pm \
+	lib/ES/Senado/Result/Participacion_Iniciativas.pmx \
 	lib/ES/Senado/Result/Personas.pm
 
-PM_TO_BLIB = lib/ES/Senado.pm \
+PM_TO_BLIB = lib/ES/Senado/Result/Actividades.pmx \
+	blib/lib/ES/Senado/Result/Actividades.pmx \
+	lib/ES/Senado/Result/Intervencion_Actividades.pm \
+	blib/lib/ES/Senado/Result/Intervencion_Actividades.pm \
+	lib/ES/Senado/Result/Actividades.pm \
+	blib/lib/ES/Senado/Result/Actividades.pm \
+	lib/ES/Senado/Result/Descriptores_Actividad.pm \
+	blib/lib/ES/Senado/Result/Descriptores_Actividad.pm \
+	lib/ES/Senado/Result/Participacion_Iniciativas.pmx \
+	blib/lib/ES/Senado/Result/Participacion_Iniciativas.pmx \
+	lib/ES/Senado.pm \
 	blib/lib/ES/Senado.pm \
+	lib/ES/Senado/Result/Iniciativas.pmx \
+	blib/lib/ES/Senado/Result/Iniciativas.pmx \
 	lib/ES/Senado/Result/Personas.pm \
 	blib/lib/ES/Senado/Result/Personas.pm
 
@@ -811,7 +829,13 @@ ppd :
 
 pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
+	  lib/ES/Senado/Result/Actividades.pmx blib/lib/ES/Senado/Result/Actividades.pmx \
+	  lib/ES/Senado/Result/Intervencion_Actividades.pm blib/lib/ES/Senado/Result/Intervencion_Actividades.pm \
+	  lib/ES/Senado/Result/Actividades.pm blib/lib/ES/Senado/Result/Actividades.pm \
+	  lib/ES/Senado/Result/Descriptores_Actividad.pm blib/lib/ES/Senado/Result/Descriptores_Actividad.pm \
+	  lib/ES/Senado/Result/Participacion_Iniciativas.pmx blib/lib/ES/Senado/Result/Participacion_Iniciativas.pmx \
 	  lib/ES/Senado.pm blib/lib/ES/Senado.pm \
+	  lib/ES/Senado/Result/Iniciativas.pmx blib/lib/ES/Senado/Result/Iniciativas.pmx \
 	  lib/ES/Senado/Result/Personas.pm blib/lib/ES/Senado/Result/Personas.pm 
 	$(NOECHO) $(TOUCH) pm_to_blib
 
