@@ -1,0 +1,84 @@
+a img, img a { border: none;}
+a { color: #06767A;}
+body { margin: 0; padding: 0; font: 82.5% Arial; color: #585C5B;}
+#header { font: 1.2em Georgia;}
+#header a#logo { text-decoration: none; color: #585C5B; }
+#header #tagline { background: #F3F3EA; padding: 1em; margin: .5em 0 3em 0; }
+#tagline span { font-weight: bold;}
+#tagline div { display: inline; padding: 0 1em 0 0; font-size: 1.3em;}
+
+
+#container, #sidebar, #main_content { /*border: 1px solid red;*/}
+#container { margin: 2em auto; width: 950px;}
+#sidebar { width: 300px; float: left; }
+#main_content { margin: 0 0 0 320px; }
+
+.senadores span { color: #4F0043;}
+.intervenciones span { color: #9C0804; }
+.iniciativas span { color: #FFA929; }
+.cargos span { color: #7E991B; }
+
+.last { margin-right: 0;}
+.home .block { float: left; width: 31%; margin: 0 2% 0 0; }
+
+
+h2 { font: 2em/.7em Helvetica, Arial; color: #666666; margin: 0 0 .5em 0;}
+.home .block h2 span { font-size: .4em; font-weight: bold; color: #999999; text-transform: uppercase;}
+.home .block h2 span span { font-size: 1em;}
+.home .block h2 span .more { color: #669933; }
+.home .block h2 span .less { color: #CC0000; }
+
+table, table td { border-collapse: collapse; }
+.home .block td { border-top: 1px dotted #999; padding: 5px 5px 15px 0 ;}
+.home .block td.num { font: 1.3em Helvetica; color: #9C0804; width: 40px;}
+
+h1 { margin: 0;}
+.actividad_senador { width: 48%; float: left; }
+.tag_cloud { width: 48%; float: right; }
+.actividad_senador h2 { font: 1.3em Georgia; margin: 1em 0 .5em 0;}
+.actividad_senador ul { margin: 0 0 3em 0; font-size: .85em; padding: 0 0 0 1.5em; list-style-type: square;}
+
+.clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+.clearfix, .container {display:block;}
+.clear {clear:both;}
+
+
+/* TAGS nube */
+.nube-tags-grande, .nube-tags-pequena { position: relative; text-align: center; font-size: 13px; font-family: Arial, Helvetica, sans-serif; }
+.nube-tags-grande {
+	line-height: 220%;
+}
+.nube-tags-grande a, .nube-tags-grande a:visited { padding: 0 3px; text-decoration: none; }
+.nube-tags-grande a:hover { color: #FFFFFF; background: #006699; }
+
+.nube-tags-grande .tag-1 { font-size: .75em; }
+.nube-tags-grande .tag-2 { font-size: .85em; }
+.nube-tags-grande .tag-3 { font-size: 1em; }
+.nube-tags-grande .tag-4 { font-size: 1.1em; }
+.nube-tags-grande .tag-5 { font-size: 1.2em; }
+.nube-tags-grande .tag-6 { font-size: 1.4em; }
+.nube-tags-grande .tag-7 { font-size: 1.6em; }
+.nube-tags-grande .tag-8 { font-size: 1.8em; }
+.nube-tags-grande .tag-9 { font-size: 2em; }
+.nube-tags-grande .tag-10 { font-size: 2.2em; }
+.nube-tags-grande .tag-11 { font-size: 2.4em; }
+.nube-tags-grande .tag-12 { font-size: 2.5em; }
+.nube-tags-grande .tag-13 { font-size: 2.6em; }
+.nube-tags-grande .tag-14 { font-size: 2.7em; }
+.nube-tags-grande .tag-15 { font-size: 2.8em; }
+
+.nube-tags-pequena .tag-1 { font-size: .75em; }
+.nube-tags-pequena .tag-2 { font-size: .85em; }
+.nube-tags-pequena .tag-3 { font-size: 1em; }
+.nube-tags-pequena .tag-4 { font-size: 1.1em; }
+.nube-tags-pequena .tag-5 { font-size: 1.2em; }
+.nube-tags-pequena .tag-6 { font-size: 1.3em; }
+.nube-tags-pequena .tag-7 { font-size: 1.4em; }
+.nube-tags-pequena .tag-8 { font-size: 1.5em; }
+.nube-tags-pequena .tag-9 { font-size: 1.6em; }
+.nube-tags-pequena .tag-10 { font-size: 1.7em; }
+.nube-tags-pequena .tag-11 { font-size: 1.8em; }
+.nube-tags-pequena .tag-12 { font-size: 1.9em; }
+.nube-tags-pequena .tag-13 { font-size: 2em; }
+.nube-tags-pequena .tag-14 { font-size: 2.1em; }
+.nube-tags-pequena .tag-15 { font-size: 2.2em; }
