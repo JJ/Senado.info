@@ -10,10 +10,10 @@ use ES::Senado;
 use File::Slurp qw(read_file);
 
 my $source;
-if ( -r '../../data/lista-alfabetica-senadores.html' ) {
-  $source = '../../data/lista-alfabetica-senadores.html';
+if ( -r 'lista-alfabetica-senadores.html' ) {
+  $source = 'lista-alfabetica-senadores.html';
 } else {
-   $source = '../data/lista-alfabetica-senadores.html';
+   $source = 't/lista-alfabetica-senadores.html';
 }
 
 my $listado = read_file( $source ) || die "No puedo cargar $source por $@\n";

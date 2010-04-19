@@ -1,4 +1,4 @@
-Changes
+daChanges
 MANIFEST
 Makefile.PL
 README
@@ -18,3 +18,4 @@ t/200.html
 t/249.html  
 t/278.html
 t/interv_089.html
+t/lista-alfabetica-senadores.html
