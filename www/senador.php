@@ -152,7 +152,7 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
 
 				// Instantiate and draw our chart, passing in some options.
 				var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-				chart.draw(data, {width: 300, height: 300, is3D: true, title: 'Tipo de intervenciones'});
+				chart.draw(data, {width: 300, height: 300, is3D: true, legendFontSize: 12, title: 'Tipo de intervenciones'});
 			  }
 			</script>
 
