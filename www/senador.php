@@ -98,7 +98,7 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
 			<div class="senador">
   <h1><?php echo ucwords(mb_strtolower($senador['nombre'], "iso-8859-1"))." ".ucwords(mb_strtolower($senador['apellidos'], "iso-8859-1"))?></h1>
 				<div class="meta">
-					<?php echo ucwords(mb_strtolower($senador['zona'], "iso-8859-1"))." · ".$senador['grupo']?>
+					<?php echo ucwords(mb_strtolower($senador['zona'], "iso-8859-1"))." &middot; ".$senador['grupo']?>
 				</div>
 				
 				<div class="actividad_senador">
@@ -152,7 +152,7 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
 
 				// Instantiate and draw our chart, passing in some options.
 				var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-				chart.draw(data, {width: 300, height: 300, is3D: true, legendFontSize: 12, title: 'Tipo de intervenciones'});
+				chart.draw(data, {width: 600, height: 300, is3D: true, legendFontSize: 10, title: 'Tipo de intervenciones'});
 			  }
 			</script>
 
