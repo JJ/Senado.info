@@ -3,10 +3,10 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-	      NAME                => 'ES::Senado',
+	      NAME                => 'Data::ES::Senado',
 	      AUTHOR              => 'JJ Merelo <jj@merelo.net>',
-	      VERSION_FROM        => 'lib/ES/Senado.pm',
-	      ABSTRACT_FROM       => 'lib/ES/Senado.pm',
+	      VERSION_FROM        => 'lib/Data/ES/Senado.pm',
+	      ABSTRACT_FROM       => 'lib/Data/ES/Senado.pm',
 	      PL_FILES            => {},
 	      PREREQ_PM => {
 			    'Test::More' => 0,

@@ -6,7 +6,7 @@ use warnings;
 use Test::More qw( no_plan ); #Random initial string...
 use lib qw( lib ../lib ../../lib  ); #Just in case we are testing it in-place
 
-use ES::Senado qw(extrae_info_ficha);
+use Data::ES::Senado qw(extrae_info_ficha);
 use File::Slurp qw(read_file);
 
 my @fichas = qw(249 278 061 125 200);

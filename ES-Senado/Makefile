@@ -1,4 +1,4 @@
-# This Makefile is for the ES::Senado extension to perl.
+# This Makefile is for the Data::ES::Senado extension to perl.
 #
 # It was generated automatically by MakeMaker version
 # 6.56 (Revision: 65600) from the contents of
@@ -11,13 +11,13 @@
 
 #   MakeMaker Parameters:
 
-#     ABSTRACT_FROM => q[lib/ES/Senado.pm]
+#     ABSTRACT_FROM => q[lib/Data/ES/Senado.pm]
 #     AUTHOR => q[JJ Merelo <jj@merelo.net>]
 #     BUILD_REQUIRES => {  }
-#     NAME => q[ES::Senado]
+#     NAME => q[Data::ES::Senado]
 #     PL_FILES => {  }
 #     PREREQ_PM => { Test::More=>q[0], YAML=>q[0], version=>q[0], DBIx::Class=>q[0] }
-#     VERSION_FROM => q[lib/ES/Senado.pm]
+#     VERSION_FROM => q[lib/Data/ES/Senado.pm]
 #     clean => { FILES=>q[ES-Senado-*] }
 #     dist => { COMPRESS=>q[gzip -9f], SUFFIX=>q[gz] }
 
@@ -56,13 +56,13 @@ VENDORLIBEXP = /usr/lib/perl5/vendor_perl/5.10.0
 AR_STATIC_ARGS = cr
 DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
-NAME = ES::Senado
-NAME_SYM = ES_Senado
-VERSION = 0.0.3
+NAME = Data::ES::Senado
+NAME_SYM = Data_ES_Senado
+VERSION = 0.0.4
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_0_3
+VERSION_SYM = 0_0_4
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.0.3
+XS_VERSION = 0.0.4
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -146,11 +146,11 @@ MM_REVISION = 65600
 # PARENT_NAME = NAME without BASEEXT and no trailing :: (eg Foo::Bar)
 # DLBASE  = Basename part of dynamic library. May be just equal BASEEXT.
 MAKE = make
-FULLEXT = ES/Senado
+FULLEXT = Data/ES/Senado
 BASEEXT = Senado
-PARENT_NAME = ES
+PARENT_NAME = Data::ES
 DLBASE = $(BASEEXT)
-VERSION_FROM = lib/ES/Senado.pm
+VERSION_FROM = lib/Data/ES/Senado.pm
 OBJECT = 
 LDFROM = $(OBJECT)
 LINKTYPE = dynamic
@@ -162,14 +162,18 @@ C_FILES  =
 O_FILES  = 
 H_FILES  = 
 MAN1PODS = 
-MAN3PODS = lib/ES/Senado.pm
+MAN3PODS = lib/Data/ES/Senado.pm \
+	lib/Data/ES/Senado/Result/Actividades.pm \
+	lib/Data/ES/Senado/Result/Descriptores_Actividad.pm \
+	lib/Data/ES/Senado/Result/Intervencion_Actividades.pm \
+	lib/Data/ES/Senado/Result/Personas.pm
 
 # Where is the Config information that we are using/depend on
 CONFIGDEP = $(PERL_ARCHLIB)$(DFSEP)Config.pm $(PERL_INC)$(DFSEP)config.h
 
 # Where to build things
-INST_LIBDIR      = $(INST_LIB)/ES
-INST_ARCHLIBDIR  = $(INST_ARCHLIB)/ES
+INST_LIBDIR      = $(INST_LIB)/Data/ES
+INST_ARCHLIBDIR  = $(INST_ARCHLIB)/Data/ES
 
 INST_AUTODIR     = $(INST_LIB)/auto/$(FULLEXT)
 INST_ARCHAUTODIR = $(INST_ARCHLIB)/auto/$(FULLEXT)
@@ -184,31 +188,34 @@ PERL_ARCHIVE       =
 PERL_ARCHIVE_AFTER = 
 
 
-TO_INST_PM = lib/ES/Senado.pm \
-	lib/ES/Senado/Result/Actividades.pm \
-	lib/ES/Senado/Result/Actividades.pmx \
-	lib/ES/Senado/Result/Descriptores_Actividad.pm \
-	lib/ES/Senado/Result/Iniciativas.pmx \
-	lib/ES/Senado/Result/Intervencion_Actividades.pm \
-	lib/ES/Senado/Result/Participacion_Iniciativas.pmx \
-	lib/ES/Senado/Result/Personas.pm
+TO_INST_PM = lib/Data/ES/ChangeLog \
+	lib/Data/ES/Senado.pm \
+	lib/Data/ES/Senado/Result/Actividades.pm \
+	lib/Data/ES/Senado/Result/Actividades.pmx \
+	lib/Data/ES/Senado/Result/Descriptores_Actividad.pm \
+	lib/Data/ES/Senado/Result/Iniciativas.pmx \
+	lib/Data/ES/Senado/Result/Intervencion_Actividades.pm \
+	lib/Data/ES/Senado/Result/Participacion_Iniciativas.pmx \
+	lib/Data/ES/Senado/Result/Personas.pm
 
-PM_TO_BLIB = lib/ES/Senado/Result/Actividades.pmx \
-	blib/lib/ES/Senado/Result/Actividades.pmx \
-	lib/ES/Senado/Result/Intervencion_Actividades.pm \
-	blib/lib/ES/Senado/Result/Intervencion_Actividades.pm \
-	lib/ES/Senado/Result/Actividades.pm \
-	blib/lib/ES/Senado/Result/Actividades.pm \
-	lib/ES/Senado/Result/Descriptores_Actividad.pm \
-	blib/lib/ES/Senado/Result/Descriptores_Actividad.pm \
-	lib/ES/Senado/Result/Participacion_Iniciativas.pmx \
-	blib/lib/ES/Senado/Result/Participacion_Iniciativas.pmx \
-	lib/ES/Senado.pm \
-	blib/lib/ES/Senado.pm \
-	lib/ES/Senado/Result/Iniciativas.pmx \
-	blib/lib/ES/Senado/Result/Iniciativas.pmx \
-	lib/ES/Senado/Result/Personas.pm \
-	blib/lib/ES/Senado/Result/Personas.pm
+PM_TO_BLIB = lib/Data/ES/Senado/Result/Actividades.pmx \
+	blib/lib/Data/ES/Senado/Result/Actividades.pmx \
+	lib/Data/ES/Senado.pm \
+	blib/lib/Data/ES/Senado.pm \
+	lib/Data/ES/Senado/Result/Actividades.pm \
+	blib/lib/Data/ES/Senado/Result/Actividades.pm \
+	lib/Data/ES/Senado/Result/Iniciativas.pmx \
+	blib/lib/Data/ES/Senado/Result/Iniciativas.pmx \
+	lib/Data/ES/ChangeLog \
+	blib/lib/Data/ES/ChangeLog \
+	lib/Data/ES/Senado/Result/Personas.pm \
+	blib/lib/Data/ES/Senado/Result/Personas.pm \
+	lib/Data/ES/Senado/Result/Descriptores_Actividad.pm \
+	blib/lib/Data/ES/Senado/Result/Descriptores_Actividad.pm \
+	lib/Data/ES/Senado/Result/Intervencion_Actividades.pm \
+	blib/lib/Data/ES/Senado/Result/Intervencion_Actividades.pm \
+	lib/Data/ES/Senado/Result/Participacion_Iniciativas.pmx \
+	blib/lib/Data/ES/Senado/Result/Participacion_Iniciativas.pmx
 
 
 # --- MakeMaker platform_constants section:
@@ -276,8 +283,8 @@ CI = ci -u
 RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
-DISTNAME = ES-Senado
-DISTVNAME = ES-Senado-0.0.3
+DISTNAME = Data-ES-Senado
+DISTVNAME = Data-ES-Senado-0.0.4
 
 
 # --- MakeMaker macro section:
@@ -430,9 +437,17 @@ POD2MAN = $(POD2MAN_EXE)
 
 
 manifypods : pure_all  \
-	lib/ES/Senado.pm
+	lib/Data/ES/Senado/Result/Personas.pm \
+	lib/Data/ES/Senado.pm \
+	lib/Data/ES/Senado/Result/Descriptores_Actividad.pm \
+	lib/Data/ES/Senado/Result/Actividades.pm \
+	lib/Data/ES/Senado/Result/Intervencion_Actividades.pm
 	$(NOECHO) $(POD2MAN) --section=3 --perm_rw=$(PERM_RW) \
-	  lib/ES/Senado.pm $(INST_MAN3DIR)/ES::Senado.$(MAN3EXT) 
+	  lib/Data/ES/Senado/Result/Personas.pm $(INST_MAN3DIR)/Data::ES::Senado::Result::Personas.$(MAN3EXT) \
+	  lib/Data/ES/Senado.pm $(INST_MAN3DIR)/Data::ES::Senado.$(MAN3EXT) \
+	  lib/Data/ES/Senado/Result/Descriptores_Actividad.pm $(INST_MAN3DIR)/Data::ES::Senado::Result::Descriptores_Actividad.$(MAN3EXT) \
+	  lib/Data/ES/Senado/Result/Actividades.pm $(INST_MAN3DIR)/Data::ES::Senado::Result::Actividades.$(MAN3EXT) \
+	  lib/Data/ES/Senado/Result/Intervencion_Actividades.pm $(INST_MAN3DIR)/Data::ES::Senado::Result::Intervencion_Actividades.$(MAN3EXT) 
 
 
 
@@ -497,8 +512,8 @@ realclean purge ::  clean realclean_subdirs
 metafile : create_distdir
 	$(NOECHO) $(ECHO) Generating META.yml
 	$(NOECHO) $(ECHO) '--- #YAML:1.0' > META_new.yml
-	$(NOECHO) $(ECHO) 'name:               ES-Senado' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version:            0.0.3' >> META_new.yml
+	$(NOECHO) $(ECHO) 'name:               Data-ES-Senado' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version:            0.0.4' >> META_new.yml
 	$(NOECHO) $(ECHO) 'abstract:           Clase base para representar los datos del Senado español' >> META_new.yml
 	$(NOECHO) $(ECHO) 'author:' >> META_new.yml
 	$(NOECHO) $(ECHO) '    - JJ Merelo <jj@merelo.net>' >> META_new.yml
@@ -811,7 +826,7 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.0.3">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.0.4">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Clase base para representar los datos del Senado español</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>JJ Merelo &lt;jj@merelo.net&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
@@ -829,14 +844,15 @@ ppd :
 
 pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
-	  lib/ES/Senado/Result/Actividades.pmx blib/lib/ES/Senado/Result/Actividades.pmx \
-	  lib/ES/Senado/Result/Intervencion_Actividades.pm blib/lib/ES/Senado/Result/Intervencion_Actividades.pm \
-	  lib/ES/Senado/Result/Actividades.pm blib/lib/ES/Senado/Result/Actividades.pm \
-	  lib/ES/Senado/Result/Descriptores_Actividad.pm blib/lib/ES/Senado/Result/Descriptores_Actividad.pm \
-	  lib/ES/Senado/Result/Participacion_Iniciativas.pmx blib/lib/ES/Senado/Result/Participacion_Iniciativas.pmx \
-	  lib/ES/Senado.pm blib/lib/ES/Senado.pm \
-	  lib/ES/Senado/Result/Iniciativas.pmx blib/lib/ES/Senado/Result/Iniciativas.pmx \
-	  lib/ES/Senado/Result/Personas.pm blib/lib/ES/Senado/Result/Personas.pm 
+	  lib/Data/ES/Senado/Result/Actividades.pmx blib/lib/Data/ES/Senado/Result/Actividades.pmx \
+	  lib/Data/ES/Senado.pm blib/lib/Data/ES/Senado.pm \
+	  lib/Data/ES/Senado/Result/Actividades.pm blib/lib/Data/ES/Senado/Result/Actividades.pm \
+	  lib/Data/ES/Senado/Result/Iniciativas.pmx blib/lib/Data/ES/Senado/Result/Iniciativas.pmx \
+	  lib/Data/ES/ChangeLog blib/lib/Data/ES/ChangeLog \
+	  lib/Data/ES/Senado/Result/Personas.pm blib/lib/Data/ES/Senado/Result/Personas.pm \
+	  lib/Data/ES/Senado/Result/Descriptores_Actividad.pm blib/lib/Data/ES/Senado/Result/Descriptores_Actividad.pm \
+	  lib/Data/ES/Senado/Result/Intervencion_Actividades.pm blib/lib/Data/ES/Senado/Result/Intervencion_Actividades.pm \
+	  lib/Data/ES/Senado/Result/Participacion_Iniciativas.pmx blib/lib/Data/ES/Senado/Result/Participacion_Iniciativas.pmx 
 	$(NOECHO) $(TOUCH) pm_to_blib
 
 

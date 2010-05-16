@@ -6,7 +6,7 @@ use warnings;
 use Test::More qw( no_plan ); #Random initial string...
 use lib qw( lib ../lib ../../lib  ); #Just in case we are testing it in-place
 
-use ES::Senado;
+use Data::ES::Senado;
 use YAML  qw(Load);
 
 use DBI;
@@ -20,7 +20,7 @@ SKIP: {
   skip "No hay base de datos instalada", 3 if $@;
   
   my $dsn = "dbi:mysql:dbname=$dbname";
-  my $schema = ES::Senado->connect($dsn);
+  my $schema = Data::ES::Senado->connect($dsn);
   $schema->deploy({ add_drop_tables => 1});
   
   
