@@ -5,30 +5,36 @@ use warnings;
 
 use lib qw( lib ../lib ../../lib  ); #Just in case we are testing it in-place
 
-use ES::Senado qw(extrae_nombres_listado extrae_info_ficha);
+use Data::ES::Senado qw(extrae_nombres_listado extrae_info_ficha);
 
 use File::Slurp qw(read_file);
 use LWP::Simple qw(get);
 
 #Conectamos a la BD
-my $dbname = 'sena2';
+my $dbname = shift || 'sena2';
+my $source_file = shift; 
 my $dsn = "dbi:mysql:dbname=$dbname";
-my $schema = ES::Senado->connect($dsn);
+my $schema = Data::ES::Senado->connect($dsn);
 $schema->deploy({ add_drop_tables => 1});
 my $rs_persona = $schema->resultset('Personas');
 
-#Leemos la lista de senadores local
-my $source;
-if ( -r '../../data/lista-alfabetica-senadores.html' ) {
-  $source = '../../data/lista-alfabetica-senadores.html';
+#Leemos la lista de senadores local o remota
+my $listado;
+if ( $source_file ) {
+  my $source;
+  if ( -r '../../data/'.$source_file ) {
+    $source = '../../data/'.$source_file;
+  } else {
+    $source = '../data/'..$source_file;
+  }
+  $listado = read_file( $source ) || die "No puedo cargar $source por $@\n";
 } else {
-   $source = '../data/lista-alfabetica-senadores.html';
+  $listado = get ('http://www.senado.es/legis9/senadores/alfabet.html') || die "No puedo bajarme la pagina de Senado";
 }
 
-my $listado = read_file( $source ) || die "No puedo cargar $source por $@\n";
 
+#  Extraemos los nombres
 my @senadores_hash = extrae_nombres_listado( $listado );
-
 my $url_base = "http://www.senado.es";
 
 #Añadimos o la BD uno por uno

@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-our $VERSION =   "0.0.1";
+our $VERSION = "0.0.2";
 
 use base qw/DBIx::Class::Core/;
 
@@ -87,6 +87,13 @@ __PACKAGE__->add_columns(id =>
 			 },
 			 fecha_nacimiento => 
 			 { accessor => 'fecha_nacimiento',
+			   data_type => 'date',
+			   is_nullable => 0,
+			   is_auto_increment => 0
+			 },
+			 ,
+			 alta => 
+			 { accessor => 'alta',
 			   data_type => 'date',
 			   is_nullable => 0,
 			   is_auto_increment => 0

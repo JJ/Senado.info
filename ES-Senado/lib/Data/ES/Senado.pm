@@ -68,7 +68,7 @@ sub extrae_info_ficha {
        
   #Extraemos formación primero
   my ($formacion) =  ($ficha =~ m{<li>Partido.+?>([^<]+)</font>}sg);
-  
+  my ($alta_dia, $alta_mes, $alta_year ) = ( $ficha =~ m{d.a (\d+) de (\w+) de (\d+)} );
   my ($lugar_nacimiento) = ($ficha =~ m{<li>Nacid. en <font[^>]+>([^<]+)</font>}sg);
   $lugar_nacimiento = $lugar_nacimiento || 'Indefinido';
   #Luego, más o menos el resto
@@ -85,8 +85,10 @@ sub extrae_info_ficha {
     $fecha_nacimiento_year = 1111;
   }
   my $mes_en_numero = $orden_de{$fecha_nacimiento_mes};
+  my $mes_alta_en_numero = $orden_de{$alta_mes};
   return ( lugar_nacimiento => $lugar_nacimiento, 
 	   fecha_nacimiento => "$fecha_nacimiento_year-$mes_en_numero-$fecha_nacimiento_dia",
+	   alta => "$alta_year-$mes_alta_en_numero-$alta_dia",
 	   estado_civil => $estado_civil || "Indefinido",
 	   partido => $formacion );
 }
