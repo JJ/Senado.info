@@ -16,7 +16,7 @@
 #     BUILD_REQUIRES => {  }
 #     NAME => q[Data::ES::Senado]
 #     PL_FILES => {  }
-#     PREREQ_PM => { Test::More=>q[0], YAML=>q[0], version=>q[0], DBIx::Class=>q[0] }
+#     PREREQ_PM => { Test::More=>q[0], YAML=>q[0], version=>q[0], DBIx::Class=>q[0], File::Slurp=>q[0] }
 #     VERSION_FROM => q[lib/Data/ES/Senado.pm]
 #     clean => { FILES=>q[ES-Senado-*] }
 #     dist => { COMPRESS=>q[gzip -9f], SUFFIX=>q[gz] }
@@ -58,11 +58,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = Data::ES::Senado
 NAME_SYM = Data_ES_Senado
-VERSION = 0.0.4
+VERSION = 0.0.5
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_0_4
+VERSION_SYM = 0_0_5
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.0.4
+XS_VERSION = 0.0.5
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -284,7 +284,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = Data-ES-Senado
-DISTVNAME = Data-ES-Senado-0.0.4
+DISTVNAME = Data-ES-Senado-0.0.5
 
 
 # --- MakeMaker macro section:
@@ -513,7 +513,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) Generating META.yml
 	$(NOECHO) $(ECHO) '--- #YAML:1.0' > META_new.yml
 	$(NOECHO) $(ECHO) 'name:               Data-ES-Senado' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version:            0.0.4' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version:            0.0.5' >> META_new.yml
 	$(NOECHO) $(ECHO) 'abstract:           Clase base para representar los datos del Senado español' >> META_new.yml
 	$(NOECHO) $(ECHO) 'author:' >> META_new.yml
 	$(NOECHO) $(ECHO) '    - JJ Merelo <jj@merelo.net>' >> META_new.yml
@@ -525,6 +525,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) '    ExtUtils::MakeMaker:  0' >> META_new.yml
 	$(NOECHO) $(ECHO) 'requires:' >> META_new.yml
 	$(NOECHO) $(ECHO) '    DBIx::Class:  0' >> META_new.yml
+	$(NOECHO) $(ECHO) '    File::Slurp:  0' >> META_new.yml
 	$(NOECHO) $(ECHO) '    Test::More:   0' >> META_new.yml
 	$(NOECHO) $(ECHO) '    version:      0' >> META_new.yml
 	$(NOECHO) $(ECHO) '    YAML:         0' >> META_new.yml
@@ -826,11 +827,12 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.0.4">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.0.5">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Clase base para representar los datos del Senado español</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>JJ Merelo &lt;jj@merelo.net&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="DBIx::Class" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="File::Slurp" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Test::More" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="YAML::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="version::" />' >> $(DISTNAME).ppd

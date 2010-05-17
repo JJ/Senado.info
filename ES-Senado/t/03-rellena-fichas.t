@@ -34,7 +34,7 @@ for my $s (@senadores_hash[150..160]) { #loncha arbitrario
   my $ficha = get( "$url_base$url_ficha" ) || die "No puedo bajar $url_ficha";
   isnt($ficha, '', "Bajada ficha $url_ficha");
   my @datos_adicionales = extrae_info_ficha( $ficha );
-  is( $#datos_adicionales, 7, "Extraidos datos ". join( " - ", @datos_adicionales) );
+  is( $#datos_adicionales, 9, "Extraidos datos ". join( " - ", @datos_adicionales) );
   my $url_interv =  $url_ficha;
   $url_interv =~ s/ficha/interv/;
   my $interv = get( "$url_base$url_interv" ) || die "No puedo bajar $url_interv";
