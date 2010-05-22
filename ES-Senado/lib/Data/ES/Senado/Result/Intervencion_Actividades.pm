@@ -48,6 +48,8 @@ __PACKAGE__->set_primary_key( qw/ id / );
 
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
 Data::ES::Senado::Result::Intervencion_Actividades - Tabla que relaciona senadores con actividades
@@ -56,7 +58,6 @@ Data::ES::Senado::Result::Intervencion_Actividades - Tabla que relaciona senador
 =head1 VERSION
 
 Describe Data::ES::Senado::Result::Intervencion_Actividades versión 0.0.1
-
 
 =head1 SYNOPSIS
 

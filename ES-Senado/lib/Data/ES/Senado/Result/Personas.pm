@@ -103,11 +103,11 @@ __PACKAGE__->add_columns(id =>
 __PACKAGE__->set_primary_key( qw/ id / );
 __PACKAGE__->has_many('intervenciones', 'Data::ES::Senado::Result::Intervencion_Actividades', 'persona_id');
 
-
-
 "La democracia se basa en el equilibrio de poderes"; # Magic true value required at end of module
 
 __END__
+
+=encoding utf8
 
 =head1 NAME
 
@@ -156,8 +156,8 @@ los siguientes campos
 | lugar_nacimiento | varchar(64)                | NO   |     | NULL    |                | 
 | estado_civil     | varchar(64)                | NO   |     | NULL    |                | 
 | fecha_nacimiento | date                       | NO   |     | NULL    |                | 
+| alta             | date                       | NO   |     | NULL    |                | 
 +------------------+----------------------------+------+-----+---------+----------------+
-
 
 =head1 INTERFACE 
 

@@ -16,7 +16,7 @@
 #     BUILD_REQUIRES => {  }
 #     NAME => q[Data::ES::Senado]
 #     PL_FILES => {  }
-#     PREREQ_PM => { Test::More=>q[0], YAML=>q[0], version=>q[0], DBIx::Class=>q[0], File::Slurp=>q[0] }
+#     PREREQ_PM => { Test::More=>q[0], YAML=>q[0], version=>q[0], DBIx::Class=>q[0], LWP::Simple=>q[0], File::Slurp=>q[0] }
 #     VERSION_FROM => q[lib/Data/ES/Senado.pm]
 #     clean => { FILES=>q[ES-Senado-*] }
 #     dist => { COMPRESS=>q[gzip -9f], SUFFIX=>q[gz] }
@@ -58,11 +58,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = Data::ES::Senado
 NAME_SYM = Data_ES_Senado
-VERSION = 0.0.5
+VERSION = 0.0.7
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_0_5
+VERSION_SYM = 0_0_7
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.0.5
+XS_VERSION = 0.0.7
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -284,7 +284,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = Data-ES-Senado
-DISTVNAME = Data-ES-Senado-0.0.5
+DISTVNAME = Data-ES-Senado-0.0.7
 
 
 # --- MakeMaker macro section:
@@ -460,11 +460,17 @@ manifypods : pure_all  \
 
 # --- MakeMaker subdirs section:
 
-# none
+# The default clean, realclean and test targets in this Makefile
+# have automatically been given entries for each subdir.
+
+
+subdirs ::
+	$(NOECHO) cd Data-ES-Senado-0.0.5 && $(MAKE) $(USEMAKEFILE) $(FIRST_MAKEFILE) all $(PASTHRU)
+
 
 # --- MakeMaker clean_subdirs section:
 clean_subdirs :
-	$(NOECHO) $(NOOP)
+	$(ABSPERLRUN)  -e 'chdir '\''Data-ES-Senado-0.0.5'\'';  system '\''$(MAKE) clean'\'' if -f '\''$(FIRST_MAKEFILE)'\'';' --
 
 
 # --- MakeMaker clean section:
@@ -484,10 +490,10 @@ clean :: clean_subdirs
 	  $(INST_ARCHAUTODIR)/extralibs.ld blibdirs.ts \
 	  core.[0-9][0-9][0-9][0-9][0-9] *perl.core \
 	  core.*perl.*.? $(MAKE_APERL_FILE) \
-	  perl $(BASEEXT).def \
+	  $(BASEEXT).def perl \
 	  core.[0-9][0-9][0-9] mon.out \
-	  lib$(BASEEXT).def perlmain.c \
-	  perl.exe so_locations \
+	  lib$(BASEEXT).def perl.exe \
+	  perlmain.c so_locations \
 	  $(BASEEXT).exp 
 	- $(RM_RF) \
 	  ES-Senado-* blib 
@@ -496,7 +502,8 @@ clean :: clean_subdirs
 
 # --- MakeMaker realclean_subdirs section:
 realclean_subdirs :
-	$(NOECHO) $(NOOP)
+	- $(ABSPERLRUN)  -e 'chdir '\''Data-ES-Senado-0.0.5'\'';  system '\''$(MAKE) $(USEMAKEFILE) $(MAKEFILE_OLD) realclean'\'' if -f '\''$(MAKEFILE_OLD)'\'';' --
+	- $(ABSPERLRUN)  -e 'chdir '\''Data-ES-Senado-0.0.5'\'';  system '\''$(MAKE) $(USEMAKEFILE) $(FIRST_MAKEFILE) realclean'\'' if -f '\''$(FIRST_MAKEFILE)'\'';' --
 
 
 # --- MakeMaker realclean section:
@@ -513,7 +520,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) Generating META.yml
 	$(NOECHO) $(ECHO) '--- #YAML:1.0' > META_new.yml
 	$(NOECHO) $(ECHO) 'name:               Data-ES-Senado' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version:            0.0.5' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version:            0.0.7' >> META_new.yml
 	$(NOECHO) $(ECHO) 'abstract:           Clase base para representar los datos del Senado español' >> META_new.yml
 	$(NOECHO) $(ECHO) 'author:' >> META_new.yml
 	$(NOECHO) $(ECHO) '    - JJ Merelo <jj@merelo.net>' >> META_new.yml
@@ -526,6 +533,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) 'requires:' >> META_new.yml
 	$(NOECHO) $(ECHO) '    DBIx::Class:  0' >> META_new.yml
 	$(NOECHO) $(ECHO) '    File::Slurp:  0' >> META_new.yml
+	$(NOECHO) $(ECHO) '    LWP::Simple:  0' >> META_new.yml
 	$(NOECHO) $(ECHO) '    Test::More:   0' >> META_new.yml
 	$(NOECHO) $(ECHO) '    version:      0' >> META_new.yml
 	$(NOECHO) $(ECHO) '    YAML:         0' >> META_new.yml
@@ -791,7 +799,7 @@ $(MAP_TARGET) :: static $(MAKE_APERL_FILE)
 $(MAKE_APERL_FILE) : $(FIRST_MAKEFILE) pm_to_blib
 	$(NOECHO) $(ECHO) Writing \"$(MAKE_APERL_FILE)\" for this $(MAP_TARGET)
 	$(NOECHO) $(PERLRUNINST) \
-		Makefile.PL DIR= \
+		Makefile.PL DIR=Data-ES-Senado-0.0.5 \
 		MAKEFILE=$(MAKE_APERL_FILE) LINKTYPE=static \
 		MAKEAPERL=1 NORECURS=1 CCCDLFLAGS=
 
@@ -811,6 +819,9 @@ test :: $(TEST_TYPE) subdirs-test
 subdirs-test ::
 	$(NOECHO) $(NOOP)
 
+subdirs-test ::
+	$(NOECHO) cd Data-ES-Senado-0.0.5 && $(MAKE) test $(PASTHRU)
+
 
 test_dynamic :: pure_all
 	PERL_DL_NONLAZY=1 $(FULLPERLRUN) "-MExtUtils::Command::MM" "-e" "test_harness($(TEST_VERBOSE), '$(INST_LIB)', '$(INST_ARCHLIB)')" $(TEST_FILES)
@@ -827,12 +838,13 @@ testdb_static :: testdb_dynamic
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.0.5">' > $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="$(DISTNAME)" VERSION="0.0.7">' > $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Clase base para representar los datos del Senado español</ABSTRACT>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>JJ Merelo &lt;jj@merelo.net&gt;</AUTHOR>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="DBIx::Class" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="File::Slurp" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="LWP::Simple" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Test::More" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="YAML::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="version::" />' >> $(DISTNAME).ppd
