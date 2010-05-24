@@ -1,6 +1,7 @@
 <?php
 
-include("db.php");
+include_once("db.php");
+include_once("tagcloud2.php");
 
 // Numero de senadores
 $result = executeQuery("select count(id) as senadores from personas;");
@@ -21,6 +22,23 @@ $senador = searchSenatorById($id);
 $result = executeQuery("select count(id) as veces from intervencion_actividades where persona_id=$id;");
 $ints_senador = $result[0]['veces'];
 $int_senador = executeQuery("select actividad,fase from intervencion_actividades where persona_id=$id;");
+
+$arr = executeQuery("select fase from intervencion_actividades where persona_id=$id;");
+
+foreach ($arr as $item)
+{
+	if (!isset($act[$item['fase']]))
+		$act[$item['fase']]=1;
+	else
+		$act[$item['fase']]++;
+}
+
+$chart="";
+foreach ($act as $p=>$n)
+{
+	$chart.="\n\t\t['$p', $n],";
+}
+$chart=chop($chart,',');
 
 ?>
 
@@ -100,33 +118,19 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
 				<div class="meta">
 					<?php echo ucwords(mb_strtolower($senador['zona'], "iso-8859-1"))." &middot; ".$senador['grupo']?>
 				</div>
-				
+
+				<div class="tagcloud">
+				<?php
+					$arr=executeQuery("select count(descriptores_actividad.descriptor) as N, descriptores_actividad.descriptor from descriptores_actividad,intervencion_actividades where descriptores_actividad.actividad=intervencion_actividades.actividad and intervencion_actividades.persona_id=$id group by descriptor order by N desc limit 0,50;");
+
+					shuffle($arr); // Orden aleatorio
+
+					generateCloud($arr, 8, 35);
+				?>
+				</div>
+
 				<div class="actividad_senador">
-					
 					<div class="intervenciones">
-					
-							<?php
-
-		include_once("db.php");
-
-		$arr = executeQuery("select fase from intervencion_actividades where persona_id=$id;");
-
-		foreach ($arr as $item)
-		{
-			if (!isset($act[$item['fase']]))
-				$act[$item['fase']]=1;
-			else
-				$act[$item['fase']]++;
-		}
-
-		$chart="";
-		foreach ($act as $p=>$n)
-		{
-			$chart.="\n\t\t['$p', $n],";
-		}
-		$chart=chop($chart,',');
-
-		?>
 
 			<!--Load the AJAX API-->
 			<script type="text/javascript" src="http://www.google.com/jsapi"></script>
