@@ -98,7 +98,7 @@ $int_senador = executeQuery("select actividad,fase from intervencion_actividades
 
 <h2>Software</h2>
 
-  <p>sena2.info está hecho en <a href='http://perl.com'>Perl</a>, y el programa necesario para extraer los datos ha sido liberado en <a href='http://search.cpan.org/~jmerelo/ES-Senado-0.0.3/'>CPAN</a>, el repositorio de módulos en Perl. También se pueden obtener los fuentes (y colaborar en el desarrollo, si es necesario) en <a href=' http://github.com/JJ/Senado.info'>github</a>. La base de datos se puede descargar completa del mismo repositorio, o de <a href='/data/senado.sql.gz'>este sitio, en formato MySQL</a></p>
+  <p>sena2.info está hecho en <a href='http://perl.com'>Perl</a>, y el programa necesario para extraer los datos ha sido liberado en <a href='http://search.cpan.org/dist/Data-ES-Senado/'>CPAN</a>, el repositorio de módulos en Perl. También se pueden obtener los fuentes (y colaborar en el desarrollo, si es necesario) en <a href=' http://github.com/JJ/Senado.info'>github</a>. La base de datos se puede descargar completa del mismo repositorio, o de <a href='/data/senado.sql.gz'>este sitio, en formato MySQL</a></p>
 
 <h2>Sobre el Senado</h2>
 
