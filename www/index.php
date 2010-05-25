@@ -59,7 +59,7 @@ $ultimas = executeQuery("select personas.id,personas.nombre,personas.apellidos,p
 			<div id="tagline">
 				
 				<div class="senadores">
-					<span class="num"><?php echo $senadores ?></span> <a href='/senadores.php'>senadores</a>
+					<span class="num"><?php echo $senadores ?></span> <a href='senadores.php'>senadores</a>
 				</div>
 
 				<div class="intervenciones">
