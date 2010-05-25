@@ -2,6 +2,7 @@
 
 include_once("db.php");
 include_once("tagcloud2.php");
+include_once("switchlist.php");
 
 // Numero de senadores
 $result = executeQuery("select count(id) as senadores from personas;");
@@ -21,7 +22,7 @@ $senador = searchSenatorById($id);
 
 $result = executeQuery("select count(id) as veces from intervencion_actividades where persona_id=$id;");
 $ints_senador = $result[0]['veces'];
-$int_senador = executeQuery("select actividad,fase from intervencion_actividades where persona_id=$id;");
+$int_senador = executeQuery("select intervencion_actividades.fase,actividades.titulo,actividades.url from actividades,intervencion_actividades where actividades.url=intervencion_actividades.actividad and intervencion_actividades.persona_id=$id order by intervencion_actividades.fase asc;");
 
 $arr = executeQuery("select fase from intervencion_actividades where persona_id=$id;");
 
@@ -164,14 +165,23 @@ $chart=chop($chart,',');
     <div id="chart_div"></div>
 					
 						<h2><span><?php echo $ints_senador ?></span> intervenciones</h2>
-						<ul>
 						<?php
+						
+							addLevel();
+							$current = "";
 							foreach ($int_senador as $item)
 							{
-								echo "<li><a href=\"http://www.senado.es/".$item['actividad']."\">".$item['fase']."</a></li>";
+								$fase = $item['fase'];
+								if ($current!=$fase)
+								{
+									if ($current) decLevel();
+									$current = $fase;
+									addTitle($fase);
+								}
+								addItem($item['titulo'],"http://www.senado.es/".$item['url']);
 							}
+							if ($current) decLevel();
 						?>
-						</ul>
 
 					</div>
 					
