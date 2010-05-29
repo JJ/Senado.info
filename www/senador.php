@@ -115,9 +115,9 @@ $chart=chop($chart,',');
 		<div id="main_content">
 			
 			<div class="senador">
-  <h1><?php echo ucwords(mb_strtolower($senador['nombre'], "iso-8859-1"))." ".ucwords(mb_strtolower($senador['apellidos'], "iso-8859-1"))?></h1>
+  <h1><?php echo mb_convert_case($senador['nombre'], MB_CASE_TITLE,'iso-8859-1')." ".mb_convert_case($senador['apellidos'], MB_CASE_TITLE,'iso-8859-1')?></h1>
 				<div class="meta">
-					<?php echo ucwords(mb_strtolower($senador['zona'], "iso-8859-1"))." &middot; ".$senador['grupo']?>
+					<?php echo mb_convert_case($senador['zona'], MB_CASE_TITLE,'iso-8859-1')." &middot; ".$senador['grupo']?>
 				</div>
 
 				<div class="tagcloud">
