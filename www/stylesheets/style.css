@@ -34,10 +34,15 @@ table, table td { border-collapse: collapse; }
 .home .block td.num { font: 1.3em Helvetica; color: #9C0804; width: 40px;}
 
 h1 { margin: 0;}
-.actividad_senador { width: 48%; float: left; }
-.tag_cloud { width: 48%; float: right; }
-.actividad_senador h2 { font: 1.3em Georgia; margin: 1em 0 .5em 0;}
-.actividad_senador ul { margin: 0 0 3em 0; font-size: .85em; padding: 0 0 0 1.5em; list-style-type: square;}
+.actividad_senador { width: 70%; float: left; display:inline; }
+/*.tag_cloud { width: 48%; float: right; }*/
+.actividad_senador h2 { font: 1.3em Georgia; margin: 1em 0 .5em 0; #margin-left:100px}
+.actividad_senador ul { margin: 0 0 3em 0; font-size: .85em; padding: 0 0 0 1.5em; list-style-type: square; #margin-left:100px}
+.actividad_senador ul a {   text-decoration: none;  }
+.actividad_senador ul ul { margin: 0 0 3em 0; font-size: .85em; padding: 0 0 0 1.5em; list-style-type: circle; #margin-left:100px}
+.actividad_senador ul ul a { color: black; }
+
+.tagcloud { height: auto; width: 400px; #width: 350px; display:inline; position: absolute; left: 0px; margin-left:20px; z-index:2; margin-top: 30px;}
 
 .clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
 .clearfix, .container {display:block;}

@@ -1,0 +1,35 @@
+.nube{
+   /*width: 600px;*/
+   text-align: center;
+   display:inline;
+   position:relative;
+}
+.nube div.etiquetas{
+   vertical-align:middle;
+   valign:middle;
+   font-family: Helvetica, Arial, sans-serif; 
+   font-stretch: narrow;
+   font-weight: bold;
+   text-align: center;
+   font-size:8pt;
+   padding:5px;
+}
+
+.vertical
+{
+   -moz-transform-origin: 0 0;
+   -webkit-transform: rotate(90deg);
+   -webkit-transform-origin: 0 0;
+   -moz-transform: rotate(90deg);
+   writing-mode: tb-rl;   
+   /*white-space: nowrap;*/
+}
+
+.nube div.etiquetas span{
+   float: left;
+   display:inline-block;
+   margin: 0 0 0 0;
+   height: auto;
+   white-space: nowrap;
+   text-align: center
+}
