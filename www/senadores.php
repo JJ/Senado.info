@@ -93,7 +93,7 @@ $senadores = executeQuery("select nombre, apellidos, zona, grupo, id from person
 				<?php
 					foreach ($senadores as $item)
 					{
-					  echo "<tr><td class=\"num\">".$item['veces']."</td><td><a href=\"senador.php?id=".$item['id']."\">".ucwords(mb_strtolower($item['nombre'],'iso-8859-1'))." ".ucwords(mb_strtolower($item['apellidos'],'iso-8859-1'))."</a><br>".ucwords(mb_strtolower($item['zona'],'iso-8859-1'))." · ".$item['grupo']."</td></tr>\n";
+					  echo "<tr><td><a href=\"senador.php?id=".$item['id']."\">".mb_convert_case($item['nombre'],MB_CASE_TITLE,'iso-8859-1')." ".mb_convert_case($item['apellidos'],MB_CASE_TITLE,'iso-8859-1')."</a><br>".mb_convert_case($item['zona'],MB_CASE_TITLE,'iso-8859-1')." · ".$item['grupo']."</td></tr>\n";
 					}
 				?>
 					
