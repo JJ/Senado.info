@@ -1,5 +1,7 @@
 package Data::ES::Senado::Result::Actividades;
 
+use utf8;
+
 use warnings;
 use strict;
 use Carp;
@@ -50,6 +52,8 @@ __PACKAGE__->has_many('descriptoress_actividad', 'Data::ES::Senado::Result::Desc
 __END__
 
 =head1 NAME
+
+=encoding utf8
 
 Data::ES::Senado::Result::Actividades - Actividades de senadores
 

@@ -13,7 +13,8 @@ WriteMakefile(
 			    'version'    => 0,
 			    'YAML' => 0,
 			    'File::Slurp' => 0,
-			    'DBIx::Class' => 0
+			    'DBIx::Class' => 0,
+			    'LWP::Simple' => 0
 			   },
 	      dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
 	      clean               => { FILES => 'ES-Senado-*' },
