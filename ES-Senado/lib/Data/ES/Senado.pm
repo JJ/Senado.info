@@ -6,7 +6,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('0.0.7');
+use version 0.77; our $VERSION = version->declare('0.0.8');
 
 # Other recommended modules (uncomment to use):
 #  use IO::Prompt;
