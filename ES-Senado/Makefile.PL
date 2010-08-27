@@ -10,7 +10,7 @@ WriteMakefile(
 	      PL_FILES            => {},
 	      PREREQ_PM => {
 			    'Test::More' => 0,
-			    'version'    => 0,
+			    'version'    => 0.77,
 			    'YAML' => 0,
 			    'File::Slurp' => 0,
 			    'DBIx::Class' => 0,
