@@ -1,10 +1,11 @@
-.nube{
+#nube {
    /*width: 600px;*/
    text-align: center;
    display:inline;
    position:relative;
 }
-.nube div.etiquetas{
+#etiquetas
+{
    vertical-align:middle;
    valign:middle;
    font-family: Helvetica, Arial, sans-serif; 
@@ -25,7 +26,8 @@
    /*white-space: nowrap;*/
 }
 
-.nube div.etiquetas span{
+#etiquetas span
+{
    float: left;
    display:inline-block;
    margin: 0 0 0 0;

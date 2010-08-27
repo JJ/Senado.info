@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /prototipo
+Disallow: /js
+Sitemap: http://www.sena2.info/sitemap.xml
+

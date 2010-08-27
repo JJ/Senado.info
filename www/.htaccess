@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule senador/([0-9]+)$ versenador.php?id=$1

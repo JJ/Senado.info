@@ -1,17 +1,3 @@
-<script type="text/javascript">
-function switchit(list)
-{
-	var items = document.getElementById(list).style;
-	if (items.display == "none")
-	{
-		items.display = "block";
-	}
-	else
-	{
-		items.display = "none";
-	}
-}
-</script>
 <?php
 
 $SL_CURRENT = 0;
@@ -54,7 +40,7 @@ function addTitle($titulo, $style = "", $disc="")
 		echo "<li>";
 	}
 	
-	  echo "<a style=\"".$style."\" href=\"javascript:switchit('ID".sprintf("%04d",$SL_CURRENT)."');\">".$titulo."</a><ul style=\"display:none;";
+	  echo "<a style=\"".$style."\" href='#' onclick=\"switchit('ID".sprintf("%04d",$SL_CURRENT)."');return false;\">".$titulo."</a><ul style=\"display:none;";
 	
 	if ($disc)
 	{
@@ -65,8 +51,9 @@ function addTitle($titulo, $style = "", $disc="")
 	
 	if ($SL_LEVEL)
 	{
-		echo "</li>";
+		echo "</li>\n";
 	}
+	else echo "\n";
 	
 	$SL_CURRENT++;	
 	$SL_LEVEL++;
