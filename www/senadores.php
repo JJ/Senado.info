@@ -1,20 +1,67 @@
 <?php
 
-include("db.php");
+include_once("db.php");
 
-// Numero de senadores
-$result = executeQuery("select count(id) as senadores from personas;");
-$num_senadores = $result[0]['senadores'];
+$provincias = array();
+$provincias[0]="";
+$provincias[1]="Álava";
+$provincias[2]="Albacete";
+$provincias[3]="Alicante";
+$provincias[4]="Almería";
+$provincias[5]="Asturias";
+$provincias[6]="Ávila";
+$provincias[7]="Badajoz";
+$provincias[8]="Barcelona";
+$provincias[9]="Burgos";
+$provincias[10]="Cáceres";
+$provincias[11]="Cádiz";
+$provincias[12]="Cantabria";
+$provincias[13]="Castellón";
+$provincias[14]="Ceuta";
+$provincias[15]="Ciudad Real";
+$provincias[16]="Córdoba";
+$provincias[17]="Cuenca";
+$provincias[18]="Girona";
+$provincias[19]="Las Palmas";
+$provincias[20]="Granada";
+$provincias[21]="Guadalajara";
+$provincias[22]="Guipúzcoa";
+$provincias[23]="Huelva";
+$provincias[24]="Huesca";
+$provincias[25]="Illes Balears";
+$provincias[26]="Jaén";
+$provincias[27]="A Coruña";
+$provincias[28]="La Rioja";
+$provincias[29]="León";
+$provincias[30]="Lleida";
+$provincias[31]="Lugo";
+$provincias[32]="Madrid";
+$provincias[33]="Málaga";
+$provincias[34]="Melilla";
+$provincias[35]="Murcia";
+$provincias[36]="Navarra";
+$provincias[37]="Ourense";
+$provincias[38]="Palencia";
+$provincias[39]="Pontevedra";
+$provincias[40]="Salamanca";
+$provincias[41]="Segovia";
+$provincias[42]="Sevilla";
+$provincias[43]="Soria";
+$provincias[44]="Tarragona";
+$provincias[45]="Santa Cruz de Tenerife";
+$provincias[46]="Teruel";
+$provincias[47]="Toledo";
+$provincias[48]="Valencia/Valéncia";
+$provincias[49]="Valladolid";
+$provincias[50]="Vizcaya";
+$provincias[51]="Zamora";
+$provincias[52]="Zaragoza";
 
-// Numero de intervenciones
-$result = executeQuery("select count(id) as intervenciones from intervencion_actividades;");
-$intervenciones = $result[0]['intervenciones'];
+if (!$_POST['apellidos'] && !$_POST['grupo'] && !$_POST['provincia'])
+	$senadoresL = executeQuery("select nombre, apellidos, zona, grupo, id from personas;");
+else
+	$senadoresL = searchSenators($_POST['apellidos'], $_POST['grupo'], $provincias[intval($_POST['provincia'])], "", "", "", "", "", false);
 
-// Numero de actividades
-$result = executeQuery("select count(titulo) as iniciativas from actividades;");
-$iniciativas = $result[0]['iniciativas'];
-
-$senadores = executeQuery("select nombre, apellidos, zona, grupo, id from personas;");
 
 ?>
 
@@ -22,83 +69,54 @@ $senadores = executeQuery("select nombre, apellidos, zona, grupo, id from person
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-  <title>Senado.info</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <title>Sena2.info - Resultados de la búsqueda</title>
+  <meta name="description" content="Sena2.info - Como parte de El Desafío AbreDatos 2010 ponemos a disposición esta web con análisis estadísticos del Senado español." />
+  <meta name="keywords" content="senado,senadores,españa,españoles,politica,politicos,abredatos,desafio,2010,estadisticas,investigacion,camara alta,cortes generales,español,intervenciones" />
 
   <meta name="robots" content="NOODP, " />
   <meta http-equiv="Content-Language" content="es" />
 
-  <link href="stylesheets/style.css" media="screen" rel="Stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="favicon.ico">
+  <link href="/stylesheets/style.css" media="screen" rel="Stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="/favicon.ico">
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js"></script>
-
-<style>
-
-</style>
-
+</head>
 <body>
 
 <div id="container">
 
 	<div id="header">
-		
-		<div class="cont">
-
-                        <div id="search">
-				<a href="/info.php">Acerca de</a>
-			</div><!-- #search -->
-			
-			<a href="/" id="logo"><img src="img/logoweb.png"></a>
-
-			<div id="tagline">
-				
-				<div class="senadores">
-					<span class="num"><?php echo $num_senadores ?></span>  <a href='/senadores.php'>senadores</a>
-				</div>
-
-				<div class="intervenciones">
-					<span class="num"><?php echo $intervenciones ?></span> intervenciones
-				</div>
-
-				<div class="iniciativas">
-					<span class="num"><?php echo $iniciativas ?></span> iniciativas
-				</div>
-
-			<!--	<div class="cargos">
-					<span class="num">234</span> cargos
-				</div> -->
-
-		
-		</div><!-- .cont -->
-		
+	<?php include_once("header.php");?>
 	</div><!-- #header -->
 	
 	
 	<div id="content">
 		
 		<div id="sidebar">
-			<a href="index.php">Inicio</a> > Senadores
+			<a href="/">Inicio</a> > <a href="busqueda.php">Búsqueda</a> > Resultados
 		</div>
 		
 		<div id="main_content">
 			
 			<div class="senador">
 
-  <h1> <span>Lista <span class="more">completa</span></span> de senadores </h2>
+			<h1> <span>Búsqueda de <span class="more">senadores</span></span></h2>
+				<br/><br/>
 				
 				<table>
 				<?php
-					foreach ($senadores as $item)
-					{
-					  echo "<tr><td><a href=\"senador.php?id=".$item['id']."\">".mb_convert_case($item['nombre'],MB_CASE_TITLE,'iso-8859-1')." ".mb_convert_case($item['apellidos'],MB_CASE_TITLE,'iso-8859-1')."</a><br>".mb_convert_case($item['zona'],MB_CASE_TITLE,'iso-8859-1')." · ".$item['grupo']."</td></tr>\n";
-					}
+					if ($senadoresL)
+						foreach ($senadoresL as $item)
+						{
+						  echo "<tr><td><a href=\"/senador/".$item['id']."\">".mb_convert_case($item['nombre'],MB_CASE_TITLE,'iso-8859-1')." ".mb_convert_case($item['apellidos'],MB_CASE_TITLE,'iso-8859-1')."</a><br>".mb_convert_case($item['zona'],MB_CASE_TITLE,'iso-8859-1')." · ".$item['grupo']."</td></tr>\n";
+						}
+					else
+						echo "<tr><td>Sin resultados</td></tr>\n";
 				?>
 					
 				</table>
 				
+				<br/><br/>
+				<input type="button" value="Atrás" style="position:relative;left:180px;" onclick="history.go(-1);"/>
 			</div><!-- .senador -->
 		
 		</div><!-- #main_content -->

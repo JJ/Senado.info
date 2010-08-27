@@ -1,4 +1,4 @@
-<link href='stylesheets/tagcloud.css' media='screen' rel='Stylesheet' type='text/css' />
+<link href='/stylesheets/tagcloud.css' media="screen" rel="Stylesheet" type="text/css" />
 <?php
 
 include_once("db.php");
@@ -75,8 +75,8 @@ function generateCloud($arr, $min_size, $max_size)
 	$prop = ($max_size-$min_size)/($max_n-$min_n);
 
 	echo "
-	<div class='nube' id='nube'>
-	<div class='etiquetas'>
+	<div id='nube'>
+	<div id='etiquetas'>
 	";
 
 	// A escribir!

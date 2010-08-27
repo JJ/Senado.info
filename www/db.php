@@ -175,6 +175,7 @@ function searchSenators($surname, $group, $zone, $party, $genre, $birthplace, $s
 	close_db();
 	
 	$i=0;
+	$ret = array();
 	while ($item = mysql_fetch_assoc($result))
 	{
 		$ret[$i++]=$item;
@@ -245,5 +246,25 @@ function executeQuery($query)
 	
 	return $ret;
 }
+
+function cleanQuery($string)
+{
+  connect_db();
+  if(get_magic_quotes_gpc())  // prevents duplicate backslashes
+  {
+	$string = stripslashes($string);
+  }
+  if (phpversion() >= '4.3.0')
+  {
+	$string = mysql_real_escape_string($string);
+  }
+  else
+  {
+	$string = mysql_escape_string($string);
+  }
+  close_db();
+  return $string;
+}
+
 
 ?>
